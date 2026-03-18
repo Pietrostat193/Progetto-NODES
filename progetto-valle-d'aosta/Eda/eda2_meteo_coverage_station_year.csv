@@ -1,0 +1,225 @@
+station_id,station_name,year,parameter,n_months_with_data
+3550,Gressoney-la-Trinit - D'Ejola,2019,precipitazione,12
+3550,Gressoney-la-Trinit - D'Ejola,2019,pressione,0
+3550,Gressoney-la-Trinit - D'Ejola,2019,temperatura,12
+3550,Gressoney-la-Trinit - D'Ejola,2019,umidit_relativa,0
+3550,Gressoney-la-Trinit - D'Ejola,2020,precipitazione,12
+3550,Gressoney-la-Trinit - D'Ejola,2020,pressione,0
+3550,Gressoney-la-Trinit - D'Ejola,2020,temperatura,12
+3550,Gressoney-la-Trinit - D'Ejola,2020,umidit_relativa,0
+3550,Gressoney-la-Trinit - D'Ejola,2021,precipitazione,12
+3550,Gressoney-la-Trinit - D'Ejola,2021,pressione,0
+3550,Gressoney-la-Trinit - D'Ejola,2021,temperatura,12
+3550,Gressoney-la-Trinit - D'Ejola,2021,umidit_relativa,0
+3550,Gressoney-la-Trinit - D'Ejola,2022,precipitazione,12
+3550,Gressoney-la-Trinit - D'Ejola,2022,pressione,0
+3550,Gressoney-la-Trinit - D'Ejola,2022,temperatura,12
+3550,Gressoney-la-Trinit - D'Ejola,2022,umidit_relativa,0
+3550,Gressoney-la-Trinit - D'Ejola,2023,precipitazione,12
+3550,Gressoney-la-Trinit - D'Ejola,2023,pressione,0
+3550,Gressoney-la-Trinit - D'Ejola,2023,temperatura,12
+3550,Gressoney-la-Trinit - D'Ejola,2023,umidit_relativa,0
+3550,Gressoney-la-Trinit - D'Ejola,2024,precipitazione,12
+3550,Gressoney-la-Trinit - D'Ejola,2024,pressione,0
+3550,Gressoney-la-Trinit - D'Ejola,2024,temperatura,12
+3550,Gressoney-la-Trinit - D'Ejola,2024,umidit_relativa,0
+3550,Gressoney-la-Trinit - D'Ejola,2025,precipitazione,9
+3550,Gressoney-la-Trinit - D'Ejola,2025,pressione,0
+3550,Gressoney-la-Trinit - D'Ejola,2025,temperatura,9
+3550,Gressoney-la-Trinit - D'Ejola,2025,umidit_relativa,0
+3560,Roisan - Preyl,2019,precipitazione,11
+3560,Roisan - Preyl,2019,pressione,0
+3560,Roisan - Preyl,2019,temperatura,12
+3560,Roisan - Preyl,2019,umidit_relativa,12
+3560,Roisan - Preyl,2020,precipitazione,12
+3560,Roisan - Preyl,2020,pressione,0
+3560,Roisan - Preyl,2020,temperatura,12
+3560,Roisan - Preyl,2020,umidit_relativa,12
+3560,Roisan - Preyl,2021,precipitazione,11
+3560,Roisan - Preyl,2021,pressione,0
+3560,Roisan - Preyl,2021,temperatura,12
+3560,Roisan - Preyl,2021,umidit_relativa,12
+3560,Roisan - Preyl,2022,precipitazione,12
+3560,Roisan - Preyl,2022,pressione,0
+3560,Roisan - Preyl,2022,temperatura,12
+3560,Roisan - Preyl,2022,umidit_relativa,12
+3560,Roisan - Preyl,2023,precipitazione,12
+3560,Roisan - Preyl,2023,pressione,0
+3560,Roisan - Preyl,2023,temperatura,12
+3560,Roisan - Preyl,2023,umidit_relativa,12
+3560,Roisan - Preyl,2024,precipitazione,12
+3560,Roisan - Preyl,2024,pressione,0
+3560,Roisan - Preyl,2024,temperatura,12
+3560,Roisan - Preyl,2024,umidit_relativa,12
+3560,Roisan - Preyl,2025,precipitazione,9
+3560,Roisan - Preyl,2025,pressione,0
+3560,Roisan - Preyl,2025,temperatura,9
+3560,Roisan - Preyl,2025,umidit_relativa,9
+4000,Aosta - Piazza Plouves,2019,precipitazione,0
+4000,Aosta - Piazza Plouves,2019,pressione,0
+4000,Aosta - Piazza Plouves,2019,temperatura,12
+4000,Aosta - Piazza Plouves,2019,umidit_relativa,12
+4000,Aosta - Piazza Plouves,2020,precipitazione,0
+4000,Aosta - Piazza Plouves,2020,pressione,0
+4000,Aosta - Piazza Plouves,2020,temperatura,12
+4000,Aosta - Piazza Plouves,2020,umidit_relativa,12
+4000,Aosta - Piazza Plouves,2021,precipitazione,0
+4000,Aosta - Piazza Plouves,2021,pressione,0
+4000,Aosta - Piazza Plouves,2021,temperatura,12
+4000,Aosta - Piazza Plouves,2021,umidit_relativa,12
+4000,Aosta - Piazza Plouves,2022,precipitazione,0
+4000,Aosta - Piazza Plouves,2022,pressione,0
+4000,Aosta - Piazza Plouves,2022,temperatura,12
+4000,Aosta - Piazza Plouves,2022,umidit_relativa,12
+4000,Aosta - Piazza Plouves,2023,precipitazione,0
+4000,Aosta - Piazza Plouves,2023,pressione,0
+4000,Aosta - Piazza Plouves,2023,temperatura,12
+4000,Aosta - Piazza Plouves,2023,umidit_relativa,12
+4000,Aosta - Piazza Plouves,2024,precipitazione,0
+4000,Aosta - Piazza Plouves,2024,pressione,0
+4000,Aosta - Piazza Plouves,2024,temperatura,12
+4000,Aosta - Piazza Plouves,2024,umidit_relativa,12
+4000,Aosta - Piazza Plouves,2025,precipitazione,0
+4000,Aosta - Piazza Plouves,2025,pressione,0
+4000,Aosta - Piazza Plouves,2025,temperatura,9
+4000,Aosta - Piazza Plouves,2025,umidit_relativa,9
+4020,Aosta - Mont-Fleury,2019,precipitazione,12
+4020,Aosta - Mont-Fleury,2019,pressione,12
+4020,Aosta - Mont-Fleury,2019,temperatura,12
+4020,Aosta - Mont-Fleury,2019,umidit_relativa,12
+4020,Aosta - Mont-Fleury,2020,precipitazione,12
+4020,Aosta - Mont-Fleury,2020,pressione,12
+4020,Aosta - Mont-Fleury,2020,temperatura,12
+4020,Aosta - Mont-Fleury,2020,umidit_relativa,12
+4020,Aosta - Mont-Fleury,2021,precipitazione,12
+4020,Aosta - Mont-Fleury,2021,pressione,12
+4020,Aosta - Mont-Fleury,2021,temperatura,12
+4020,Aosta - Mont-Fleury,2021,umidit_relativa,12
+4020,Aosta - Mont-Fleury,2022,precipitazione,12
+4020,Aosta - Mont-Fleury,2022,pressione,12
+4020,Aosta - Mont-Fleury,2022,temperatura,12
+4020,Aosta - Mont-Fleury,2022,umidit_relativa,12
+4020,Aosta - Mont-Fleury,2023,precipitazione,12
+4020,Aosta - Mont-Fleury,2023,pressione,12
+4020,Aosta - Mont-Fleury,2023,temperatura,12
+4020,Aosta - Mont-Fleury,2023,umidit_relativa,12
+4020,Aosta - Mont-Fleury,2024,precipitazione,12
+4020,Aosta - Mont-Fleury,2024,pressione,12
+4020,Aosta - Mont-Fleury,2024,temperatura,12
+4020,Aosta - Mont-Fleury,2024,umidit_relativa,12
+4020,Aosta - Mont-Fleury,2025,precipitazione,9
+4020,Aosta - Mont-Fleury,2025,pressione,9
+4020,Aosta - Mont-Fleury,2025,temperatura,9
+4020,Aosta - Mont-Fleury,2025,umidit_relativa,9
+4050,La Thuile - Les Granges,2019,precipitazione,12
+4050,La Thuile - Les Granges,2019,pressione,12
+4050,La Thuile - Les Granges,2019,temperatura,12
+4050,La Thuile - Les Granges,2019,umidit_relativa,12
+4050,La Thuile - Les Granges,2020,precipitazione,12
+4050,La Thuile - Les Granges,2020,pressione,12
+4050,La Thuile - Les Granges,2020,temperatura,12
+4050,La Thuile - Les Granges,2020,umidit_relativa,12
+4050,La Thuile - Les Granges,2021,precipitazione,12
+4050,La Thuile - Les Granges,2021,pressione,12
+4050,La Thuile - Les Granges,2021,temperatura,12
+4050,La Thuile - Les Granges,2021,umidit_relativa,12
+4050,La Thuile - Les Granges,2022,precipitazione,12
+4050,La Thuile - Les Granges,2022,pressione,12
+4050,La Thuile - Les Granges,2022,temperatura,12
+4050,La Thuile - Les Granges,2022,umidit_relativa,12
+4050,La Thuile - Les Granges,2023,precipitazione,12
+4050,La Thuile - Les Granges,2023,pressione,12
+4050,La Thuile - Les Granges,2023,temperatura,12
+4050,La Thuile - Les Granges,2023,umidit_relativa,12
+4050,La Thuile - Les Granges,2024,precipitazione,12
+4050,La Thuile - Les Granges,2024,pressione,12
+4050,La Thuile - Les Granges,2024,temperatura,12
+4050,La Thuile - Les Granges,2024,umidit_relativa,12
+4050,La Thuile - Les Granges,2025,precipitazione,9
+4050,La Thuile - Les Granges,2025,pressione,9
+4050,La Thuile - Les Granges,2025,temperatura,9
+4050,La Thuile - Les Granges,2025,umidit_relativa,9
+4070,Cogne - Gimillan,2019,precipitazione,12
+4070,Cogne - Gimillan,2019,pressione,12
+4070,Cogne - Gimillan,2019,temperatura,12
+4070,Cogne - Gimillan,2019,umidit_relativa,12
+4070,Cogne - Gimillan,2020,precipitazione,12
+4070,Cogne - Gimillan,2020,pressione,12
+4070,Cogne - Gimillan,2020,temperatura,12
+4070,Cogne - Gimillan,2020,umidit_relativa,12
+4070,Cogne - Gimillan,2021,precipitazione,12
+4070,Cogne - Gimillan,2021,pressione,12
+4070,Cogne - Gimillan,2021,temperatura,12
+4070,Cogne - Gimillan,2021,umidit_relativa,12
+4070,Cogne - Gimillan,2022,precipitazione,12
+4070,Cogne - Gimillan,2022,pressione,12
+4070,Cogne - Gimillan,2022,temperatura,12
+4070,Cogne - Gimillan,2022,umidit_relativa,12
+4070,Cogne - Gimillan,2023,precipitazione,12
+4070,Cogne - Gimillan,2023,pressione,12
+4070,Cogne - Gimillan,2023,temperatura,12
+4070,Cogne - Gimillan,2023,umidit_relativa,12
+4070,Cogne - Gimillan,2024,precipitazione,12
+4070,Cogne - Gimillan,2024,pressione,12
+4070,Cogne - Gimillan,2024,temperatura,12
+4070,Cogne - Gimillan,2024,umidit_relativa,12
+4070,Cogne - Gimillan,2025,precipitazione,9
+4070,Cogne - Gimillan,2025,pressione,9
+4070,Cogne - Gimillan,2025,temperatura,9
+4070,Cogne - Gimillan,2025,umidit_relativa,9
+4080,Etroubles - Chevrire,2019,precipitazione,12
+4080,Etroubles - Chevrire,2019,pressione,12
+4080,Etroubles - Chevrire,2019,temperatura,12
+4080,Etroubles - Chevrire,2019,umidit_relativa,12
+4080,Etroubles - Chevrire,2020,precipitazione,12
+4080,Etroubles - Chevrire,2020,pressione,12
+4080,Etroubles - Chevrire,2020,temperatura,12
+4080,Etroubles - Chevrire,2020,umidit_relativa,12
+4080,Etroubles - Chevrire,2021,precipitazione,12
+4080,Etroubles - Chevrire,2021,pressione,12
+4080,Etroubles - Chevrire,2021,temperatura,12
+4080,Etroubles - Chevrire,2021,umidit_relativa,12
+4080,Etroubles - Chevrire,2022,precipitazione,12
+4080,Etroubles - Chevrire,2022,pressione,12
+4080,Etroubles - Chevrire,2022,temperatura,12
+4080,Etroubles - Chevrire,2022,umidit_relativa,12
+4080,Etroubles - Chevrire,2023,precipitazione,12
+4080,Etroubles - Chevrire,2023,pressione,12
+4080,Etroubles - Chevrire,2023,temperatura,12
+4080,Etroubles - Chevrire,2023,umidit_relativa,12
+4080,Etroubles - Chevrire,2024,precipitazione,12
+4080,Etroubles - Chevrire,2024,pressione,12
+4080,Etroubles - Chevrire,2024,temperatura,12
+4080,Etroubles - Chevrire,2024,umidit_relativa,12
+4080,Etroubles - Chevrire,2025,precipitazione,9
+4080,Etroubles - Chevrire,2025,pressione,9
+4080,Etroubles - Chevrire,2025,temperatura,9
+4080,Etroubles - Chevrire,2025,umidit_relativa,9
+4110,Donnas - Clapey,2019,precipitazione,12
+4110,Donnas - Clapey,2019,pressione,0
+4110,Donnas - Clapey,2019,temperatura,12
+4110,Donnas - Clapey,2019,umidit_relativa,12
+4110,Donnas - Clapey,2020,precipitazione,12
+4110,Donnas - Clapey,2020,pressione,0
+4110,Donnas - Clapey,2020,temperatura,12
+4110,Donnas - Clapey,2020,umidit_relativa,12
+4110,Donnas - Clapey,2021,precipitazione,12
+4110,Donnas - Clapey,2021,pressione,0
+4110,Donnas - Clapey,2021,temperatura,12
+4110,Donnas - Clapey,2021,umidit_relativa,12
+4110,Donnas - Clapey,2022,precipitazione,12
+4110,Donnas - Clapey,2022,pressione,0
+4110,Donnas - Clapey,2022,temperatura,12
+4110,Donnas - Clapey,2022,umidit_relativa,12
+4110,Donnas - Clapey,2023,precipitazione,12
+4110,Donnas - Clapey,2023,pressione,0
+4110,Donnas - Clapey,2023,temperatura,12
+4110,Donnas - Clapey,2023,umidit_relativa,12
+4110,Donnas - Clapey,2024,precipitazione,12
+4110,Donnas - Clapey,2024,pressione,0
+4110,Donnas - Clapey,2024,temperatura,12
+4110,Donnas - Clapey,2024,umidit_relativa,12
+4110,Donnas - Clapey,2025,precipitazione,9
+4110,Donnas - Clapey,2025,pressione,0
+4110,Donnas - Clapey,2025,temperatura,9
+4110,Donnas - Clapey,2025,umidit_relativa,9

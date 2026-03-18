@@ -1,0 +1,385 @@
+station_id,station_name,municipality,location,month,month_label,parameter,mean_value,n_years_with_data
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1,Jan,precipitazione,1.3695852534562212,7
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1,Jan,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1,Jan,temperatura,-2.9424786043449638,7
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1,Jan,umidit_relativa,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,2,Feb,precipitazione,0.9852216748768473,7
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,2,Feb,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,2,Feb,temperatura,-0.5885156715205977,7
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,2,Feb,umidit_relativa,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,3,Mar,precipitazione,2.5351953941497882,7
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,3,Mar,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,3,Mar,temperatura,0.039043381535039,7
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,3,Mar,umidit_relativa,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,4,Apr,precipitazione,3.6608538587848933,7
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,4,Apr,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,4,Apr,temperatura,2.7776190476190474,7
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,4,Apr,umidit_relativa,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,5,May,precipitazione,5.169585253456221,7
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,5,May,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,5,May,temperatura,6.8101382488479265,7
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,5,May,umidit_relativa,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,6,Jun,precipitazione,4.062564102564102,7
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,6,Jun,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,6,Jun,temperatura,11.82,7
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,6,Jun,umidit_relativa,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,7,Jul,precipitazione,2.4442396313364054,7
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,7,Jul,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,7,Jul,temperatura,13.773271889400922,7
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,7,Jul,umidit_relativa,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,8,Aug,precipitazione,2.783410138248848,7
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,8,Aug,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,8,Aug,temperatura,13.305212140473543,7
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,8,Aug,umidit_relativa,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,9,Sep,precipitazione,2.816645962732919,7
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,9,Sep,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,9,Sep,temperatura,9.279047619047619,7
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,9,Sep,umidit_relativa,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,10,Oct,precipitazione,4.114695340501792,6
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,10,Oct,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,10,Oct,temperatura,5.976881720430107,6
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,10,Oct,umidit_relativa,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,11,Nov,precipitazione,3.1594708994708993,6
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,11,Nov,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,11,Nov,temperatura,0.6937739463601533,6
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,11,Nov,umidit_relativa,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,12,Dec,precipitazione,2.070529669454401,6
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,12,Dec,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,12,Dec,temperatura,-1.8892473118279571,6
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,12,Dec,umidit_relativa,,0
+3560,Roisan - Preyl,Roisan,Preyl,1,Jan,precipitazione,1.3793237753882917,5
+3560,Roisan - Preyl,Roisan,Preyl,1,Jan,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,1,Jan,temperatura,2.88973462577467,7
+3560,Roisan - Preyl,Roisan,Preyl,1,Jan,umidit_relativa,61.74771968854282,7
+3560,Roisan - Preyl,Roisan,Preyl,2,Feb,precipitazione,0.7861013370865587,7
+3560,Roisan - Preyl,Roisan,Preyl,2,Feb,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,2,Feb,temperatura,5.437280084447572,7
+3560,Roisan - Preyl,Roisan,Preyl,2,Feb,umidit_relativa,60.28629486277269,7
+3560,Roisan - Preyl,Roisan,Preyl,3,Mar,precipitazione,1.7183717357910906,7
+3560,Roisan - Preyl,Roisan,Preyl,3,Mar,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,3,Mar,temperatura,6.7409831029185865,7
+3560,Roisan - Preyl,Roisan,Preyl,3,Mar,umidit_relativa,60.9637019969278,7
+3560,Roisan - Preyl,Roisan,Preyl,4,Apr,precipitazione,1.782857142857143,7
+3560,Roisan - Preyl,Roisan,Preyl,4,Apr,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,4,Apr,temperatura,9.947142857142858,7
+3560,Roisan - Preyl,Roisan,Preyl,4,Apr,umidit_relativa,60.083333333333336,7
+3560,Roisan - Preyl,Roisan,Preyl,5,May,precipitazione,2.561171823568137,7
+3560,Roisan - Preyl,Roisan,Preyl,5,May,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,5,May,temperatura,13.836852171346848,7
+3560,Roisan - Preyl,Roisan,Preyl,5,May,umidit_relativa,67.70437050237224,7
+3560,Roisan - Preyl,Roisan,Preyl,6,Jun,precipitazione,2.3666666666666667,7
+3560,Roisan - Preyl,Roisan,Preyl,6,Jun,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,6,Jun,temperatura,19.273333333333333,7
+3560,Roisan - Preyl,Roisan,Preyl,6,Jun,umidit_relativa,66.77451345755694,7
+3560,Roisan - Preyl,Roisan,Preyl,7,Jul,precipitazione,1.4110906298003074,7
+3560,Roisan - Preyl,Roisan,Preyl,7,Jul,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,7,Jul,temperatura,21.701505376344084,7
+3560,Roisan - Preyl,Roisan,Preyl,7,Jul,umidit_relativa,57.79442908346134,7
+3560,Roisan - Preyl,Roisan,Preyl,8,Aug,precipitazione,1.420430107526882,7
+3560,Roisan - Preyl,Roisan,Preyl,8,Aug,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,8,Aug,temperatura,21.258970814132105,7
+3560,Roisan - Preyl,Roisan,Preyl,8,Aug,umidit_relativa,57.812826420890936,7
+3560,Roisan - Preyl,Roisan,Preyl,9,Sep,precipitazione,1.579047619047619,7
+3560,Roisan - Preyl,Roisan,Preyl,9,Sep,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,9,Sep,temperatura,16.375714285714288,7
+3560,Roisan - Preyl,Roisan,Preyl,9,Sep,umidit_relativa,67.2395238095238,7
+3560,Roisan - Preyl,Roisan,Preyl,10,Oct,precipitazione,2.789247311827957,6
+3560,Roisan - Preyl,Roisan,Preyl,10,Oct,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,10,Oct,temperatura,11.86236559139785,6
+3560,Roisan - Preyl,Roisan,Preyl,10,Oct,umidit_relativa,74.73118279569893,6
+3560,Roisan - Preyl,Roisan,Preyl,11,Nov,precipitazione,2.3421264367816095,6
+3560,Roisan - Preyl,Roisan,Preyl,11,Nov,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,11,Nov,temperatura,5.824157088122606,6
+3560,Roisan - Preyl,Roisan,Preyl,11,Nov,umidit_relativa,72.4354980842912,6
+3560,Roisan - Preyl,Roisan,Preyl,12,Dec,precipitazione,2.115524794353122,6
+3560,Roisan - Preyl,Roisan,Preyl,12,Dec,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,12,Dec,temperatura,3.193548387096774,6
+3560,Roisan - Preyl,Roisan,Preyl,12,Dec,umidit_relativa,70.93010752688173,6
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,1,Jan,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,1,Jan,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,1,Jan,temperatura,2.764516129032258,7
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,1,Jan,umidit_relativa,57.70829493087558,7
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,2,Feb,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,2,Feb,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,2,Feb,temperatura,6.034623504574244,7
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,2,Feb,umidit_relativa,53.001864883884586,7
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,3,Mar,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,3,Mar,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,3,Mar,temperatura,8.260829493087558,7
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,3,Mar,umidit_relativa,49.64700460829493,7
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,4,Apr,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,4,Apr,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,4,Apr,temperatura,11.652857142857142,7
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,4,Apr,umidit_relativa,48.448095238095235,7
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,5,May,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,5,May,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,5,May,temperatura,15.742396313364056,7
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,5,May,umidit_relativa,54.359907834101385,7
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,6,Jun,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,6,Jun,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,6,Jun,temperatura,20.84952380952381,7
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,6,Jun,umidit_relativa,54.63333333333333,7
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,7,Jul,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,7,Jul,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,7,Jul,temperatura,23.06958525345622,7
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,7,Jul,umidit_relativa,49.20967741935484,7
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,8,Aug,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,8,Aug,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,8,Aug,temperatura,22.479723502304147,7
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,8,Aug,umidit_relativa,50.80460829493087,7
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,9,Sep,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,9,Sep,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,9,Sep,temperatura,17.586190476190477,7
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,9,Sep,umidit_relativa,58.822380952380954,7
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,10,Oct,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,10,Oct,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,10,Oct,temperatura,12.725806451612904,6
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,10,Oct,umidit_relativa,66.67258064516129,6
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,11,Nov,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,11,Nov,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,11,Nov,temperatura,5.702478632478632,6
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,11,Nov,umidit_relativa,65.58025641025641,6
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,12,Dec,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,12,Dec,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,12,Dec,temperatura,2.7006810035842292,6
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,12,Dec,umidit_relativa,67.33584229390681,6
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,1,Jan,precipitazione,0.8516129032258065,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,1,Jan,pressione,951.2034726793944,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,1,Jan,temperatura,1.8534562211981567,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,1,Jan,umidit_relativa,65.90920281794587,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,2,Feb,precipitazione,0.9613652357494722,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,2,Feb,pressione,953.7485749472203,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,2,Feb,temperatura,5.169845179451091,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,2,Feb,umidit_relativa,61.245214637579174,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,3,Mar,precipitazione,1.7703533026113671,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,3,Mar,pressione,949.6866359447005,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,3,Mar,temperatura,7.65483870967742,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,3,Mar,umidit_relativa,57.00506912442396,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,4,Apr,precipitazione,1.680952380952381,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,4,Apr,pressione,947.3942857142857,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,4,Apr,temperatura,10.998095238095239,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,4,Apr,umidit_relativa,56.19566502463054,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,5,May,precipitazione,2.047926267281106,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,5,May,pressione,947.453456221198,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,5,May,temperatura,15.227188940092166,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,5,May,umidit_relativa,60.92258541236294,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,6,Jun,precipitazione,1.8514614121510673,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,6,Jun,pressione,948.3142857142857,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,6,Jun,temperatura,20.192857142857143,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,6,Jun,umidit_relativa,61.73275510204082,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,7,Jul,precipitazione,1.07926267281106,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,7,Jul,pressione,947.5036866359447,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,7,Jul,temperatura,22.32626728110599,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,7,Jul,umidit_relativa,56.863133640552995,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,8,Aug,precipitazione,1.1003760792414854,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,8,Aug,pressione,947.8096774193548,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,8,Aug,temperatura,21.677419354838708,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,8,Aug,umidit_relativa,58.657603686635944,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,9,Sep,precipitazione,1.2801313628899835,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,9,Sep,pressione,949.5895238095238,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,9,Sep,temperatura,16.932380952380953,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,9,Sep,umidit_relativa,65.78296703296704,7
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,10,Oct,precipitazione,2.586021505376344,6
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,10,Oct,pressione,950.802688172043,6
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,10,Oct,temperatura,11.886559139784946,6
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,10,Oct,umidit_relativa,73.8220308499744,6
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,11,Nov,precipitazione,2.442222222222222,6
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,11,Nov,pressione,949.443888888889,6
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,11,Nov,temperatura,5.163888888888889,6
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,11,Nov,umidit_relativa,74.05777777777777,6
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,12,Dec,precipitazione,1.6166481275491287,6
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,12,Dec,pressione,949.9256952169077,6
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,12,Dec,temperatura,1.567575083426029,6
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,12,Dec,umidit_relativa,75.28233370313478,6
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1,Jan,precipitazione,1.7640552995391705,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1,Jan,pressione,835.4612903225807,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1,Jan,temperatura,-1.7622119815668202,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1,Jan,umidit_relativa,60.01981566820277,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,2,Feb,precipitazione,1.5678043631245602,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,2,Feb,pressione,838.3959359605911,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,2,Feb,temperatura,0.529609429978888,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,2,Feb,umidit_relativa,59.86315974665728,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,3,Mar,precipitazione,2.0410445468509986,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,3,Mar,pressione,835.1470046082949,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,3,Mar,temperatura,1.0705069124423963,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,3,Mar,umidit_relativa,63.568663594470046,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,4,Apr,precipitazione,2.0478770818672296,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,4,Apr,pressione,834.5012925170068,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,4,Apr,temperatura,3.9591156462585033,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,4,Apr,umidit_relativa,64.3006462585034,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,5,May,precipitazione,2.9995698924731182,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,5,May,pressione,835.9304147465438,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,5,May,temperatura,8.058064516129033,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,5,May,umidit_relativa,68.47695852534562,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,6,Jun,precipitazione,2.6488341543513956,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,6,Jun,pressione,838.9376354679803,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,6,Jun,temperatura,13.477027914614121,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,6,Jun,umidit_relativa,68.34515599343186,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,7,Jul,precipitazione,1.8599078341013826,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,7,Jul,pressione,839.4225806451614,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,7,Jul,temperatura,15.79447004608295,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,7,Jul,umidit_relativa,59.64377880184332,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,8,Aug,precipitazione,2.0732877800730973,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,8,Aug,pressione,839.3329095820753,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,8,Aug,temperatura,15.374384236453203,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,8,Aug,umidit_relativa,61.412919116478626,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,9,Sep,precipitazione,2.6485714285714286,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,9,Sep,pressione,839.0314285714286,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,9,Sep,temperatura,10.856190476190477,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,9,Sep,umidit_relativa,70.32095238095238,7
+4050,La Thuile - Les Granges,La Thuile,Les Granges,10,Oct,precipitazione,4.444480286738351,6
+4050,La Thuile - Les Granges,La Thuile,Les Granges,10,Oct,pressione,838.6413978494624,6
+4050,La Thuile - Les Granges,La Thuile,Les Granges,10,Oct,temperatura,7.16989247311828,6
+4050,La Thuile - Les Granges,La Thuile,Les Granges,10,Oct,umidit_relativa,72.54677419354839,6
+4050,La Thuile - Les Granges,La Thuile,Les Granges,11,Nov,precipitazione,3.6300000000000003,6
+4050,La Thuile - Les Granges,La Thuile,Les Granges,11,Nov,pressione,835.2016666666667,6
+4050,La Thuile - Les Granges,La Thuile,Les Granges,11,Nov,temperatura,1.4744444444444444,6
+4050,La Thuile - Les Granges,La Thuile,Les Granges,11,Nov,umidit_relativa,69.2611111111111,6
+4050,La Thuile - Les Granges,La Thuile,Les Granges,12,Dec,precipitazione,3.286021505376344,6
+4050,La Thuile - Les Granges,La Thuile,Les Granges,12,Dec,pressione,834.6241935483871,6
+4050,La Thuile - Les Granges,La Thuile,Les Granges,12,Dec,temperatura,-0.7623655913978493,6
+4050,La Thuile - Les Granges,La Thuile,Les Granges,12,Dec,umidit_relativa,67.56612903225806,6
+4070,Cogne - Gimillan,Cogne,Gimillan,1,Jan,precipitazione,0.703010752688172,7
+4070,Cogne - Gimillan,Cogne,Gimillan,1,Jan,pressione,819.8092165898618,7
+4070,Cogne - Gimillan,Cogne,Gimillan,1,Jan,temperatura,-2.323041474654378,7
+4070,Cogne - Gimillan,Cogne,Gimillan,1,Jan,umidit_relativa,54.4,7
+4070,Cogne - Gimillan,Cogne,Gimillan,2,Feb,precipitazione,0.642329345531316,7
+4070,Cogne - Gimillan,Cogne,Gimillan,2,Feb,pressione,822.9668543279381,7
+4070,Cogne - Gimillan,Cogne,Gimillan,2,Feb,temperatura,0.16669598874032376,7
+4070,Cogne - Gimillan,Cogne,Gimillan,2,Feb,umidit_relativa,53.72691766361717,7
+4070,Cogne - Gimillan,Cogne,Gimillan,3,Mar,precipitazione,1.623041474654378,7
+4070,Cogne - Gimillan,Cogne,Gimillan,3,Mar,pressione,819.7857142857142,7
+4070,Cogne - Gimillan,Cogne,Gimillan,3,Mar,temperatura,0.5824884792626728,7
+4070,Cogne - Gimillan,Cogne,Gimillan,3,Mar,umidit_relativa,58.78709677419355,7
+4070,Cogne - Gimillan,Cogne,Gimillan,4,Apr,precipitazione,2.215336617405583,7
+4070,Cogne - Gimillan,Cogne,Gimillan,4,Apr,pressione,819.2185714285714,7
+4070,Cogne - Gimillan,Cogne,Gimillan,4,Apr,temperatura,3.487142857142857,7
+4070,Cogne - Gimillan,Cogne,Gimillan,4,Apr,umidit_relativa,60.82190476190476,7
+4070,Cogne - Gimillan,Cogne,Gimillan,5,May,precipitazione,2.6663594470046084,7
+4070,Cogne - Gimillan,Cogne,Gimillan,5,May,pressione,821.2516129032258,7
+4070,Cogne - Gimillan,Cogne,Gimillan,5,May,temperatura,7.449308755760368,7
+4070,Cogne - Gimillan,Cogne,Gimillan,5,May,umidit_relativa,67.00691244239631,7
+4070,Cogne - Gimillan,Cogne,Gimillan,6,Jun,precipitazione,3.15047619047619,7
+4070,Cogne - Gimillan,Cogne,Gimillan,6,Jun,pressione,824.9233333333333,7
+4070,Cogne - Gimillan,Cogne,Gimillan,6,Jun,temperatura,12.767619047619048,7
+4070,Cogne - Gimillan,Cogne,Gimillan,6,Jun,umidit_relativa,67.13428571428571,7
+4070,Cogne - Gimillan,Cogne,Gimillan,7,Jul,precipitazione,1.456804915514593,7
+4070,Cogne - Gimillan,Cogne,Gimillan,7,Jul,pressione,825.3649769585253,7
+4070,Cogne - Gimillan,Cogne,Gimillan,7,Jul,temperatura,15.044239631336405,7
+4070,Cogne - Gimillan,Cogne,Gimillan,7,Jul,umidit_relativa,59.91658986175115,7
+4070,Cogne - Gimillan,Cogne,Gimillan,8,Aug,precipitazione,2.0064516129032257,7
+4070,Cogne - Gimillan,Cogne,Gimillan,8,Aug,pressione,825.3907834101383,7
+4070,Cogne - Gimillan,Cogne,Gimillan,8,Aug,temperatura,14.53225806451613,7
+4070,Cogne - Gimillan,Cogne,Gimillan,8,Aug,umidit_relativa,62.04654377880184,7
+4070,Cogne - Gimillan,Cogne,Gimillan,9,Sep,precipitazione,1.4123809523809523,7
+4070,Cogne - Gimillan,Cogne,Gimillan,9,Sep,pressione,824.7404761904762,7
+4070,Cogne - Gimillan,Cogne,Gimillan,9,Sep,temperatura,10.153333333333332,7
+4070,Cogne - Gimillan,Cogne,Gimillan,9,Sep,umidit_relativa,68.87904761904763,7
+4070,Cogne - Gimillan,Cogne,Gimillan,10,Oct,precipitazione,3.2408602150537633,6
+4070,Cogne - Gimillan,Cogne,Gimillan,10,Oct,pressione,823.7854838709677,6
+4070,Cogne - Gimillan,Cogne,Gimillan,10,Oct,temperatura,6.479569892473118,6
+4070,Cogne - Gimillan,Cogne,Gimillan,10,Oct,umidit_relativa,69.08010752688172,6
+4070,Cogne - Gimillan,Cogne,Gimillan,11,Nov,precipitazione,1.758888888888889,6
+4070,Cogne - Gimillan,Cogne,Gimillan,11,Nov,pressione,819.595,6
+4070,Cogne - Gimillan,Cogne,Gimillan,11,Nov,temperatura,0.8233333333333334,6
+4070,Cogne - Gimillan,Cogne,Gimillan,11,Nov,umidit_relativa,63.61944444444444,6
+4070,Cogne - Gimillan,Cogne,Gimillan,12,Dec,precipitazione,1.2308861698183167,6
+4070,Cogne - Gimillan,Cogne,Gimillan,12,Dec,pressione,818.8073600296626,6
+4070,Cogne - Gimillan,Cogne,Gimillan,12,Dec,temperatura,-1.5994994438264738,6
+4070,Cogne - Gimillan,Cogne,Gimillan,12,Dec,umidit_relativa,61.10724879495736,6
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1,Jan,precipitazione,0.9594470046082949,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1,Jan,pressione,866.073732718894,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1,Jan,temperatura,-0.11290322580645168,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1,Jan,umidit_relativa,58.05714285714286,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,2,Feb,precipitazione,0.7997185080928924,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,2,Feb,pressione,868.987139338494,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,2,Feb,temperatura,2.138054187192118,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,2,Feb,umidit_relativa,58.108128078817735,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,3,Mar,precipitazione,1.4368663594470048,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,3,Mar,pressione,865.7064516129033,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,3,Mar,temperatura,2.8907834101382486,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,3,Mar,umidit_relativa,60.619354838709675,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,4,Apr,precipitazione,1.7342857142857142,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,4,Apr,pressione,864.6657142857143,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,4,Apr,temperatura,5.955238095238095,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,4,Apr,umidit_relativa,59.89666666666667,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,5,May,precipitazione,2.6,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,5,May,pressione,866.06866359447,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,5,May,temperatura,10.066820276497696,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,5,May,umidit_relativa,64.93594470046082,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,6,Jun,precipitazione,2.152216748768473,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,6,Jun,pressione,868.8142857142857,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,6,Jun,temperatura,15.348571428571429,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,6,Jun,umidit_relativa,65.71238095238095,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,7,Jul,precipitazione,1.7312749615975422,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,7,Jul,pressione,868.8746543778802,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,7,Jul,temperatura,17.397434715821813,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,7,Jul,umidit_relativa,59.46984639016897,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,8,Aug,precipitazione,1.5076497695852533,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,8,Aug,pressione,868.9365284178187,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,8,Aug,temperatura,16.87115207373272,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,8,Aug,umidit_relativa,63.78518542901031,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,9,Sep,precipitazione,1.8800000000000001,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,9,Sep,pressione,869.12,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,9,Sep,temperatura,12.38,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,9,Sep,umidit_relativa,69.41238095238096,7
+4080,Etroubles - Chevrire,Etroubles,Chevrire,10,Oct,precipitazione,3.332365591397849,6
+4080,Etroubles - Chevrire,Etroubles,Chevrire,10,Oct,pressione,868.8064516129032,6
+4080,Etroubles - Chevrire,Etroubles,Chevrire,10,Oct,temperatura,8.416129032258064,6
+4080,Etroubles - Chevrire,Etroubles,Chevrire,10,Oct,umidit_relativa,73.28064516129032,6
+4080,Etroubles - Chevrire,Etroubles,Chevrire,11,Nov,precipitazione,2.18,6
+4080,Etroubles - Chevrire,Etroubles,Chevrire,11,Nov,pressione,865.3155555555555,6
+4080,Etroubles - Chevrire,Etroubles,Chevrire,11,Nov,temperatura,2.707222222222222,6
+4080,Etroubles - Chevrire,Etroubles,Chevrire,11,Nov,umidit_relativa,69.51833333333333,6
+4080,Etroubles - Chevrire,Etroubles,Chevrire,12,Dec,precipitazione,1.695773081201335,6
+4080,Etroubles - Chevrire,Etroubles,Chevrire,12,Dec,pressione,864.7390063033,6
+4080,Etroubles - Chevrire,Etroubles,Chevrire,12,Dec,temperatura,0.31349647756766774,6
+4080,Etroubles - Chevrire,Etroubles,Chevrire,12,Dec,umidit_relativa,66.27411939191694,6
+4110,Donnas - Clapey,Donnas,Clapey,1,Jan,precipitazione,0.6817818740399386,7
+4110,Donnas - Clapey,Donnas,Clapey,1,Jan,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,1,Jan,temperatura,3.852995391705069,7
+4110,Donnas - Clapey,Donnas,Clapey,1,Jan,umidit_relativa,61.7073732718894,7
+4110,Donnas - Clapey,Donnas,Clapey,2,Feb,precipitazione,0.925158339197748,7
+4110,Donnas - Clapey,Donnas,Clapey,2,Feb,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,2,Feb,temperatura,7.039637579169598,7
+4110,Donnas - Clapey,Donnas,Clapey,2,Feb,umidit_relativa,60.02434904996481,7
+4110,Donnas - Clapey,Donnas,Clapey,3,Mar,precipitazione,2.604608294930876,7
+4110,Donnas - Clapey,Donnas,Clapey,3,Mar,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,3,Mar,temperatura,9.455299539170507,7
+4110,Donnas - Clapey,Donnas,Clapey,3,Mar,umidit_relativa,57.48433179723502,7
+4110,Donnas - Clapey,Donnas,Clapey,4,Apr,precipitazione,3.9590476190476194,7
+4110,Donnas - Clapey,Donnas,Clapey,4,Apr,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,4,Apr,temperatura,12.599047619047619,7
+4110,Donnas - Clapey,Donnas,Clapey,4,Apr,umidit_relativa,59.11571428571428,7
+4110,Donnas - Clapey,Donnas,Clapey,5,May,precipitazione,4.811059907834101,7
+4110,Donnas - Clapey,Donnas,Clapey,5,May,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,5,May,temperatura,16.314285714285713,7
+4110,Donnas - Clapey,Donnas,Clapey,5,May,umidit_relativa,68.61797235023042,7
+4110,Donnas - Clapey,Donnas,Clapey,6,Jun,precipitazione,3.219047619047619,7
+4110,Donnas - Clapey,Donnas,Clapey,6,Jun,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,6,Jun,temperatura,21.413333333333334,7
+4110,Donnas - Clapey,Donnas,Clapey,6,Jun,umidit_relativa,67.74190476190476,7
+4110,Donnas - Clapey,Donnas,Clapey,7,Jul,precipitazione,2.2691244239631336,7
+4110,Donnas - Clapey,Donnas,Clapey,7,Jul,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,7,Jul,temperatura,23.531797235023042,7
+4110,Donnas - Clapey,Donnas,Clapey,7,Jul,umidit_relativa,63.76129032258064,7
+4110,Donnas - Clapey,Donnas,Clapey,8,Aug,precipitazione,2.5972350230414745,7
+4110,Donnas - Clapey,Donnas,Clapey,8,Aug,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,8,Aug,temperatura,23.155299539170507,7
+4110,Donnas - Clapey,Donnas,Clapey,8,Aug,umidit_relativa,63.324884792626726,7
+4110,Donnas - Clapey,Donnas,Clapey,9,Sep,precipitazione,2.9238095238095236,7
+4110,Donnas - Clapey,Donnas,Clapey,9,Sep,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,9,Sep,temperatura,18.586666666666666,7
+4110,Donnas - Clapey,Donnas,Clapey,9,Sep,umidit_relativa,69.36809523809524,7
+4110,Donnas - Clapey,Donnas,Clapey,10,Oct,precipitazione,6.609677419354839,6
+4110,Donnas - Clapey,Donnas,Clapey,10,Oct,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,10,Oct,temperatura,13.910752688172042,6
+4110,Donnas - Clapey,Donnas,Clapey,10,Oct,umidit_relativa,76.80937916026626,6
+4110,Donnas - Clapey,Donnas,Clapey,11,Nov,precipitazione,2.6633333333333336,6
+4110,Donnas - Clapey,Donnas,Clapey,11,Nov,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,11,Nov,temperatura,7.817777777777778,6
+4110,Donnas - Clapey,Donnas,Clapey,11,Nov,umidit_relativa,70.285,6
+4110,Donnas - Clapey,Donnas,Clapey,12,Dec,precipitazione,1.3698924731182796,6
+4110,Donnas - Clapey,Donnas,Clapey,12,Dec,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,12,Dec,temperatura,4.89247311827957,6
+4110,Donnas - Clapey,Donnas,Clapey,12,Dec,umidit_relativa,66.91881720430108,6
