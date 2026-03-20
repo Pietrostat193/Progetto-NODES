@@ -91,6 +91,11 @@ log_consumo ~ temperatura + precipitazioni + neve + HDD + CDD +
               (1 | comune)
 ```
 
+# Commento di Pietro
+Quanto il meteo spiega le variazioni del consumo all’interno dei comuni,
+tenendo conto che ogni comune ha un livello medio diverso. In sostanza, assumiamo che l'impatto delle variabilie ambientali sia simile da comune a comune (cioe' i coefficienti non cambiano).
+
+
 ---
 
 ### Modello 2 – Blocco Calendario
