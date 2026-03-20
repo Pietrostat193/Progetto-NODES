@@ -28,9 +28,9 @@ Questa scelta è particolarmente adatta a dati panel o longitudinali, in cui si 
 
 Il modello può essere scritto come:
 
-\[
+$$
 \log(Consumo_{it}+1) = \beta_0 + \beta X_{it} + u_i + \varepsilon_{it}
-\]
+$$
 
 dove:
 
