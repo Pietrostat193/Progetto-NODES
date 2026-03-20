@@ -322,6 +322,6 @@ L’uso dei blocchi rende possibile:
 
 - separare il contributo dei fattori ambientali, temporali e turistici
 - valutare l’effetto specifico del turismo
-- costruire un’analisi più facilmente difendibile in un report, una tesi o un paper
+- costruire un’analisi più facilmente difendibile in un paper!
 
 L’interesse principale non è soltanto la performance predittiva, ma anche la possibilità di spiegare **quanto e in che modo** le diverse variabili contribuiscono al consumo energetico.
