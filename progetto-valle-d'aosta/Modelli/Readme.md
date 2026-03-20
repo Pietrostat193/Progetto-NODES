@@ -114,6 +114,11 @@ log_consumo ~ temperatura + precipitazioni + neve + HDD + CDD +
               (1 | comune)
 ```
 
+# Commento Pietro
+
+Qui ci chiediamo due cose prima se l'inserimento degli effetti calendario aumenta la spiegazione del consumo energetico, secondo di quanto.
+
+
 ---
 
 ### Modello 3 – Blocco Dinamica temporale
@@ -131,6 +136,12 @@ log_consumo ~ temperatura + precipitazioni + neve + HDD + CDD +
               lag_1 +
               (1 | comune)
 ```
+
+
+# Commento Pietro
+
+A questo punto dovrebbe essere pleonastico quello che stiamo facendo!
+
 
 ---
 
