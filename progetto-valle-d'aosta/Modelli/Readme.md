@@ -41,6 +41,7 @@ dove:
 - \(\varepsilon_{it}\) è il termine di errore
 
 La trasformazione logaritmica del consumo aiuta a rendere la distribuzione più stabile e a facilitare l’interpretazione dei coefficienti.
+In parole semplici, con il coefficiente u_i = “quanto il comune i è strutturalmente sopra o sotto la media”
 
 ---
 
