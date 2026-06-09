@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tail Risk Report</title>
+<style>
+body { font-family: Georgia, 'Times New Roman', serif; color: #1e1e1e; margin: 0; background: #f3efe7; }
+.page { max-width: 960px; margin: 0 auto; padding: 48px 56px 72px; background: #fffdf9; }
+h1, h2, h3 { font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #4c1d0f; }
+h1 { font-size: 2.1rem; margin: 0 0 1rem; border-bottom: 3px solid #c2410c; padding-bottom: 0.4rem; }
+h2 { font-size: 1.4rem; margin-top: 2.2rem; margin-bottom: 0.8rem; }
+h3 { font-size: 1.1rem; margin-top: 1.6rem; margin-bottom: 0.5rem; }
+p, li { font-size: 0.98rem; line-height: 1.6; }
+ul { padding-left: 1.4rem; }
+table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: 0.88rem; }
+thead th { background: #7c2d12; color: white; font-weight: 600; }
+th, td { border: 1px solid #d6c6b8; padding: 0.45rem 0.55rem; text-align: left; vertical-align: top; }
+tbody tr:nth-child(even) { background: #fcf7f2; }
+figure { margin: 1.4rem 0 1.8rem; }
+img { width: 100%; height: auto; border: 1px solid #e5d5c4; box-shadow: 0 10px 24px rgba(76, 29, 15, 0.10); }
+figcaption { font-size: 0.85rem; color: #6b4f3d; margin-top: 0.35rem; }
+code { background: #f5eee6; padding: 0.1rem 0.25rem; border-radius: 3px; }
+@page { size: A4; margin: 14mm; }
+@media print { body { background: white; } .page { max-width: none; padding: 0; background: white; } img { break-inside: avoid; } table { break-inside: auto; } tr, td, th { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<main class="page">
+<h1>Tail Risk Report</h1>
+<h2>Sintesi</h2>
+<p>La copula pooled vincente e' <strong>gumbel</strong>, con tail dependence superiore pari a <strong>0.030</strong> e tail inferiore nulla. Nei comuni ad alto tail risk la dipendenza di coda alta sale a <strong>0.087</strong>, mentre nei comuni a piu' alta intensita' turistica sale a <strong>0.065</strong>. La correlazione tra risk score e arrivi per residente e' <strong>0.613</strong>; l'overlap tra top 10 rischio e top 10 intensita' turistica e' <strong>4 comuni</strong> (quota <strong>0.40</strong>).</p>
+<h2>Copule</h2>
+<h3>Tabella riassuntiva per segmento</h3>
+<table>
+<thead>
+<tr>
+<th>Segmento</th>
+<th>Osservazioni</th>
+<th>Copula vincente</th>
+<th>LogLik</th>
+<th>AIC</th>
+<th>BIC</th>
+<th>Tail bassa</th>
+<th>Tail alta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>all_comuni</td>
+<td>5892</td>
+<td>gumbel</td>
+<td>6.491</td>
+<td>-10.983</td>
+<td>-4.301</td>
+<td>0.000</td>
+<td>0.030</td>
+</tr>
+<tr>
+<td>top10_tail_risk</td>
+<td>804</td>
+<td>gumbel</td>
+<td>14.855</td>
+<td>-27.711</td>
+<td>-23.021</td>
+<td>0.000</td>
+<td>0.087</td>
+</tr>
+<tr>
+<td>top10_tourism_intensity</td>
+<td>804</td>
+<td>gumbel</td>
+<td>13.231</td>
+<td>-24.461</td>
+<td>-19.771</td>
+<td>0.000</td>
+<td>0.065</td>
+</tr>
+</tbody>
+</table>
+<h3>Famiglie testate sul campione pooled</h3>
+<table>
+<thead>
+<tr>
+<th>Famiglia</th>
+<th>LogLik</th>
+<th>AIC</th>
+<th>BIC</th>
+<th>Tail bassa</th>
+<th>Tail alta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gumbel</td>
+<td>6.491</td>
+<td>-10.983</td>
+<td>-4.301</td>
+<td>0.000</td>
+<td>0.030</td>
+</tr>
+<tr>
+<td>student_t</td>
+<td>5.045</td>
+<td>-6.090</td>
+<td>7.273</td>
+<td>0.000</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td>clayton</td>
+<td>2.890</td>
+<td>-3.779</td>
+<td>2.902</td>
+<td>0.000</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td>frank</td>
+<td>0.267</td>
+<td>1.466</td>
+<td>8.148</td>
+<td>0.000</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td>gaussian</td>
+<td>0.038</td>
+<td>1.923</td>
+<td>8.605</td>
+<td>0.000</td>
+<td>0.000</td>
+</tr>
+</tbody>
+</table>
+<h3>Parametro della copula pooled vincente</h3>
+<p>Famiglia: <strong>gumbel</strong>; parametro: <strong>1.022</strong>; standard error: <strong>0.007</strong>; tail alta: <strong>0.030</strong>.</p>
+<figure>
+<img src="report_assets/copula_contour_plot.png" alt="Contour pooled">
+<figcaption>Contour pooled</figcaption>
+</figure>
+<h2>Localizzazione del tail risk</h2>
+<h3>Top 15 comuni per rischio congiunto turismo-energia</h3>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Comune</th>
+<th>Risk score</th>
+<th>P(Energy</th>
+<th>Tourism 95%)</th>
+<th>Joint 95</th>
+<th>P(Energy</th>
+<th>Tourism 90%)</th>
+<th>Arrivi/residente</th>
+<th>Rank turismo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Gressoney-Saint-Jean</td>
+<td>0.387</td>
+<td>0.333</td>
+<td>1</td>
+<td>0.286</td>
+<td>2.80</td>
+<td>13</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Brusson</td>
+<td>0.386</td>
+<td>0.333</td>
+<td>1</td>
+<td>0.286</td>
+<td>2.02</td>
+<td>16</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ayas</td>
+<td>0.383</td>
+<td>0.333</td>
+<td>2</td>
+<td>0.273</td>
+<td>3.93</td>
+<td>8</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Gressan</td>
+<td>0.376</td>
+<td>0.333</td>
+<td>1</td>
+<td>0.250</td>
+<td>0.76</td>
+<td>28</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Torgnon</td>
+<td>0.356</td>
+<td>0.333</td>
+<td>1</td>
+<td>0.167</td>
+<td>1.90</td>
+<td>18</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Chamois</td>
+<td>0.336</td>
+<td>0.250</td>
+<td>1</td>
+<td>0.300</td>
+<td>3.33</td>
+<td>12</td>
+</tr>
+<tr>
+<td>7</td>
+<td>La Thuile</td>
+<td>0.323</td>
+<td>0.222</td>
+<td>4</td>
+<td>0.324</td>
+<td>5.53</td>
+<td>5</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Rhêmes-Notre-Dame</td>
+<td>0.290</td>
+<td>0.154</td>
+<td>4</td>
+<td>0.368</td>
+<td>9.08</td>
+<td>3</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Saint-Vincent</td>
+<td>0.280</td>
+<td>0.200</td>
+<td>2</td>
+<td>0.211</td>
+<td>1.13</td>
+<td>23</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Valtournenche</td>
+<td>0.280</td>
+<td>0.143</td>
+<td>2</td>
+<td>0.355</td>
+<td>4.54</td>
+<td>6</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Gressoney-La-Trinité</td>
+<td>0.277</td>
+<td>0.185</td>
+<td>5</td>
+<td>0.238</td>
+<td>11.94</td>
+<td>1</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Cogne</td>
+<td>0.271</td>
+<td>0.125</td>
+<td>1</td>
+<td>0.364</td>
+<td>3.92</td>
+<td>9</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Courmayeur</td>
+<td>0.221</td>
+<td>0.125</td>
+<td>2</td>
+<td>0.171</td>
+<td>6.16</td>
+<td>4</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Bard</td>
+<td>0.191</td>
+<td>0.100</td>
+<td>5</td>
+<td>0.113</td>
+<td>3.50</td>
+<td>10</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Champorcher</td>
+<td>0.167</td>
+<td>0.000</td>
+<td>0</td>
+<td>0.667</td>
+<td>1.08</td>
+<td>24</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="report_assets/municipality_tail_risk_top20.png" alt="Top 20 risk score">
+<figcaption>Top 20 risk score</figcaption>
+</figure>
+<h3>Mappe</h3>
+<figure>
+<img src="report_assets/tail_risk_map_score.png" alt="Mappa risk score">
+<figcaption>Mappa risk score</figcaption>
+</figure>
+<figure>
+<img src="report_assets/tail_risk_map_conditional95.png" alt="Mappa probabilita condizionale 95">
+<figcaption>Mappa probabilita condizionale 95</figcaption>
+</figure>
+<figure>
+<img src="report_assets/tail_risk_map_tourism_intensity.png" alt="Mappa intensita turistica">
+<figcaption>Mappa intensita turistica</figcaption>
+</figure>
+<h2>Rischio vs intensita' turistica</h2>
+<figure>
+<img src="report_assets/tail_risk_vs_tourism_scatter.png" alt="Scatter rischio vs turismo">
+<figcaption>Scatter rischio vs turismo</figcaption>
+</figure>
+<h3>Comuni che compaiono in alto per rischio e/o intensita' turistica</h3>
+<table>
+<thead>
+<tr>
+<th>Comune</th>
+<th>Rank rischio</th>
+<th>Rank turismo</th>
+<th>Risk score</th>
+<th>Arrivi/residente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gressoney-Saint-Jean</td>
+<td>1</td>
+<td>13</td>
+<td>0.387</td>
+<td>2.80</td>
+</tr>
+<tr>
+<td>Brusson</td>
+<td>2</td>
+<td>16</td>
+<td>0.386</td>
+<td>2.02</td>
+</tr>
+<tr>
+<td>Ayas</td>
+<td>3</td>
+<td>8</td>
+<td>0.383</td>
+<td>3.93</td>
+</tr>
+<tr>
+<td>Gressan</td>
+<td>4</td>
+<td>28</td>
+<td>0.376</td>
+<td>0.76</td>
+</tr>
+<tr>
+<td>Torgnon</td>
+<td>5</td>
+<td>18</td>
+<td>0.356</td>
+<td>1.90</td>
+</tr>
+<tr>
+<td>Chamois</td>
+<td>6</td>
+<td>12</td>
+<td>0.336</td>
+<td>3.33</td>
+</tr>
+<tr>
+<td>La Thuile</td>
+<td>7</td>
+<td>5</td>
+<td>0.323</td>
+<td>5.53</td>
+</tr>
+<tr>
+<td>Rhêmes-Notre-Dame</td>
+<td>8</td>
+<td>3</td>
+<td>0.290</td>
+<td>9.08</td>
+</tr>
+<tr>
+<td>Saint-Vincent</td>
+<td>9</td>
+<td>23</td>
+<td>0.280</td>
+<td>1.13</td>
+</tr>
+<tr>
+<td>Valtournenche</td>
+<td>10</td>
+<td>6</td>
+<td>0.280</td>
+<td>4.54</td>
+</tr>
+<tr>
+<td>Gressoney-La-Trinité</td>
+<td>11</td>
+<td>1</td>
+<td>0.277</td>
+<td>11.94</td>
+</tr>
+<tr>
+<td>Cogne</td>
+<td>12</td>
+<td>9</td>
+<td>0.271</td>
+<td>3.92</td>
+</tr>
+<tr>
+<td>Courmayeur</td>
+<td>13</td>
+<td>4</td>
+<td>0.221</td>
+<td>6.16</td>
+</tr>
+<tr>
+<td>Bard</td>
+<td>14</td>
+<td>10</td>
+<td>0.191</td>
+<td>3.50</td>
+</tr>
+<tr>
+<td>Valsavarenche</td>
+<td>16</td>
+<td>2</td>
+<td>0.165</td>
+<td>10.61</td>
+</tr>
+<tr>
+<td>Pré-Saint-Didier</td>
+<td>17</td>
+<td>7</td>
+<td>0.130</td>
+<td>4.27</td>
+</tr>
+</tbody>
+</table>
+<h2>Lettura operativa</h2>
+<ul>
+<li>Il tail risk non e' diffuso in modo uniforme: si concentra in un gruppo ristretto di comuni alpini e turistici.</li>
+<li>La copula sui top 10 comuni risk-ranked mostra una tail dependence superiore piu' forte del campione pooled, quindi l'aggregazione regionale attenua il segnale.</li>
+<li>L'intensita' turistica media spiega parte del ranking, ma non tutto: alcuni comuni emergono come vulnerabili pur non essendo ai primissimi posti per arrivi per residente.</li>
+<li>Per il paper, la domanda forte diventa: dove gli shock turistici estremi si trasmettono piu' facilmente in shock energetici estremi?</li>
+</ul>
+</main>
+</body>
+</html>

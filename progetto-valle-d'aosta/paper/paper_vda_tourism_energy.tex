@@ -1,0 +1,959 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{natbib}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks = true,
+  linkcolor = [rgb]{0.45,0.13,0.04},
+  citecolor = [rgb]{0.45,0.13,0.04},
+  urlcolor = [rgb]{0.10,0.28,0.52},
+  pdftitle = {Tourism Pressure and Municipal Electricity Demand: Mean Effects, Extreme Dependence and Vulnerability Assessment}
+}
+
+\captionsetup{font=small, labelfont=bf}
+
+\newcommand{\meanfig}[1]{\includegraphics[width=\textwidth]{\detokenize{../Modelli/meanEffect/report_assets/#1}}}
+\newcommand{\scenfig}[1]{\includegraphics[width=\textwidth]{\detokenize{../Modelli/Scenarios/report_assets/#1}}}
+\newcommand{\tailfig}[1]{\includegraphics[width=\textwidth]{\detokenize{../Modelli/Tail Risk/report_assets/#1}}}
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+
+\title{Tourism Pressure and Municipal Electricity Demand: Mean Effects, Extreme Dependence and Vulnerability Assessment}
+\author{Pietro Colombo \and Consuelo Maria Nava \and Camilla Andreozzi \and Jethro Browell}
+\date{May 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper studies how tourism is transmitted into municipal electricity demand in Valle d'Aosta using a high-resolution municipality-month panel. The empirical analysis is organized in three linked blocks. First, we estimate nested mixed-effects models to isolate the conditional mean effect of tourism arrivals on electricity consumption after controlling for municipality heterogeneity, meteorology, seasonality and persistence. Second, we study residual tail dependence with copulas and municipality-level co-exceedance measures to identify where tourism and electricity shocks jointly concentrate in the upper tail. Third, we combine the historical tail-risk diagnostics with q95 tourism scenarios to produce forward stress rankings and a validation exercise based on realized 2025 positive stress. The results show a robust positive association between tourism and the conditional mean of electricity demand, stronger transmission in tourism-intensive municipalities, weak pooled tail dependence, and localized extreme vulnerabilities concentrated in a limited subset of municipalities. The analysis is observational, so these estimates are conditional-mean associations rather than causal effects. The scenario exercise adds that these vulnerabilities are informative for prioritization, but not for exact point prediction of stress magnitude.
+\end{abstract}
+
+\noindent\textbf{Keywords:} tourism demand; electricity consumption; mixed-effects models; copulas; tail dependence; municipal panel data
+
+\section{Introduction}
+
+Valle d'Aosta, an autonomous region in north-western Italy, combines a 
+small and sparsely populated 
+territory with a highly tourism-oriented local economy. 
+Tourist arrivals reached about 1.585 million in 2025, underscoring the 
+intensity of visitor pressure relative to the size of the region.
+Tourism is widely recognized as a key driver of regional activity, 
+especially through winter sports, hospitality, transport,
+and other visitor-related services. 
+This makes the region a useful setting for studying 
+how tourism pressure translates into electricity demand and 
+whether that relationship is concentrated in particular 
+municipalities or periods of stress.
+\noindent
+\hangindent=-5mm
+The case is substantively important because Valle d'Aosta is characterized
+by strong seasonality, pronounced spatial heterogeneity, 
+and a mountainous geography that can amplify local demand fluctuations. 
+In this setting, electricity demand is shaped not only by resident population 
+and weather, but also by highly mobile and spatially concentrated tourist flows. 
+Understanding these interactions is therefore relevant for energy planning,
+infrastructure adequacy, and local resilience in the face 
+of growing tourism pressure and climate-related uncertainty.
+
+\noindent
+\hangindent=-5mm
+The broader national energy context reinforces this motivation. 
+According to Terna, Italy's electricity demand in 2024 was 311.9 TWh, 
+of which 260.9 TWh were covered by domestic 
+production and 51.0 TWh by net imports, implying that 16.4\% of electricity 
+demand was met from abroad \citep{terna2024stats}. At the same time, the IEA reports that Italy's total 
+energy supply in 2024 remained dominated by natural gas (39.8\%) and oil products (35.6\%), 
+with smaller contributions from biofuels and waste (11.2\%), solar, 
+wind and other renewables (8.1\%), hydropower (3.6\%), and coal (1.8\%) \citep{iea2025italy}.
+This combination of external dependence and fossil-fuel exposure makes Italy particularly sensitive to 
+international energy shocks and price volatility, strengthening the policy relevance of understanding 
+localized electricity stress in tourism-intensive regions.
+
+\noindent
+\hangindent=-5mm
+This paper investigates how tourism affects electricity demand, what are
+the main drivers of that relationship, and where tourism-related electricity stress is most likely to occur.
+Moreover, it provides a framework for forecasting and it design a scenario-based analysis of 
+how tourism demand translates into electricity stress.
+
+\noindent
+\hangindent=-5mm
+From a policy perspective, this study matters for at least three reasons.
+First, electricity systems in tourism-oriented mountain regions must 
+cope with large seasonal demand swings that are not driven 
+only by resident population or weather, 
+but also by highly mobile and spatially 
+concentrated visitor flows. Second, if tourism demand translates into electricity stress unevenly across
+municipalities, regional planning based only on aggregate demand 
+can understate local bottlenecks in distribution networks, 
+peak-load management, and service reliability. 
+Third, understanding whether tourism affects only expected
+demand or also the joint upper tail of electricity shocks
+is directly relevant for resilience policy: 
+infrastructure reinforcement, storage deployment, 
+demand-side flexibility, and emergency planning should 
+be prioritized differently depending on whether 
+the main issue is persistent average pressure 
+or localized extreme co-movement.
+
+
+\noindent
+\hangindent=-5mm
+This positioning is substantially different from  all previous literature
+on the topic. One of the closest contribution date back to the early 2011s \citet{bakhat2011}, 
+ who analyse tourism-induced electricity consumption,
+in the Balearic Islands using aggregate daily load data. However, theier analysis is based on time-series models
+that disregard a more capillary spatial structure and therefore policy interventions at the municipal level.
+Most studies on the tourism-energy nexus are either cross-country analyses of aggregate
+energy use or sectoral decompositions that do not model local electricity demand directly \citep{badal2023,soylu2024,bianco2020}. 
+Our paper moves beyond that benchmark along three margins that are central for an applied statistical audience.
+First, we work at the municipality-month level within a single region, 
+which allows the tourism effect to vary over a much finer spatial scale than regional or national studies. 
+Second, we estimate the conditional mean after controlling jointly for demographic composition, 
+meteorology, seasonality, persistence and municipality-specific heterogeneity, 
+rather than inferring electricity implications from broader energy aggregates. 
+Third, we extend the analysis from mean demand pressure to localized extreme dependence, 
+asking not only whether tourism raises electricity demand on average, 
+but also where tourism-related shocks are most likely to coincide 
+with residual electricity stress. Finally, we provide a scenario 
+based forecasting  block to translate the mean-effect 
+and tail-risk evidence 
+into a forward-looking policy tool.
+
+The manuscript is organized as follows. Section 2 describes the study setting
+and data, Section 3 presents the empirical strategy, Section 4 reports the main
+results, Section 5 discusses the findings.
+
+Taken together, the structure of the paper is deliberately modular. The first empirical block identifies the average tourism effect on electricity demand; the second block isolates residual upper-tail dependence and municipality-level exposure; the third block uses tourism q95 scenarios to translate the historical evidence into forward-looking stress rankings; and the final validation step checks whether the resulting predicted rankings recover realized positive stress in 2025. This separation keeps the interpretation clear: tourism acts both as a mean-demand driver and as a localized amplifier of extreme stress, but these two roles are not identical and are therefore analysed separately.
+
+\noindent
+\hangindent=-5mm
+To make this roadmap concrete, it is useful to anticipate the indicators that the analysis delivers, since each block is summarized by a specific and interpretable quantity. The mean-effect block produces a tourism semi-elasticity, i.e. the percentage change in electricity demand associated with a one-standard-deviation increase in arrivals, together with its heterogeneous counterpart for tourism-intensive municipalities. The tail-risk block produces a region-wide upper-tail dependence coefficient $\lambda_U$ from the selected copula and, at municipality level, a conditional co-exceedance probability $p_i(0.95)$ and a composite risk score $R_i$ that ranks where extreme tourism and electricity shocks tend to coincide. The forward block, developed in Section~\ref{sec:mean-effect-model} onwards and central to the section ``From Historical Tail Risk to Forward Extreme Stress'', then combines these objects into three forward-looking indicators: the scenario load shock $\Delta L_{it}$ (the additional demand implied by a q95 tourism scenario), the tail-conditioned impact $I_{it}^{\mathrm{tail}} = \Delta L_{it}\,p_i(0.95)$ (which rescales that shock by historical tail dependence), and the risk-weighted impact $I_{it}^{\mathrm{w}} = \Delta L_{it}\,p_i(0.95)\,R_i$ (which further weights municipalities by structural vulnerability). Their temporal and spatial aggregates yield the regional and municipality-level stress rankings that constitute the paper's main forward-looking output, and whose predictive value is then assessed against realized 2025 stress. Reading the paper through these indicators makes explicit how exposure, dependence and vulnerability are kept analytically distinct and then recombined into a single prioritization tool.
+
+\section{Study Setting and Data}
+
+The starting dataset is a municipality-month panel for Valle d'Aosta containing 9,546 observations, 71 variables, and 74 municipalities over the period January 2015 to September 2025. The integrated dataset combines electricity demand, tourism arrivals and presences, municipal demographics, and meteorological covariates. 
+The final common modelling sample used in the nested models contains 5,892 observations and 73 municipalities after lag construction and complete-case filtering.
+The dependent variable is the logarithm of monthly municipal electricity consumption. The main tourism predictor is the logarithm of tourist arrivals. Weather controls include temperature, precipitation, pressure and relative humidity. Calendar controls are represented through Fourier seasonality terms and year effects. Dynamic controls include lagged log consumption at one and twelve months.
+
+The design is observational: tourism arrivals are not randomly assigned across municipalities and months, so the panel does not support a causal identification strategy. Throughout, the estimated tourism coefficients are interpreted as conditional-mean associations after adjustment for municipality heterogeneity, meteorology, seasonality and lagged demand, rather than as causal effects of tourism on electricity consumption.
+
+\begin{figure}[H]
+\centering
+\meanfig{municipality_maps.png}
+\caption{Spatial heterogeneity across municipalities. The report asset summarizes tourism clusters and municipality-level residual heterogeneity from the mean-effect model.}
+\label{fig:municipality-maps}
+\end{figure}
+
+\section{Empirical Strategy}
+
+The empirical strategy is organized as a sequence of connected steps. We first estimate the conditional mean of municipal electricity demand using progressively richer mixed-effects models 
+so that the tourism coefficient is interpreted after controlling for structural characteristics, 
+meteorology, calendar effects and persistence. 
+We then extract residual variation from the preferred specification 
+and treat the remaining shocks in tourism and electricity demand 
+as the relevant objects for dependence analysis. Finally, we evaluate whether 
+these residual shocks display upper-tail co-movement through parametric copulas 
+and municipality-level co-exceedance measures, allowing us to distinguish 
+broad average tourism pressure from localized extreme vulnerability. This block is a historical analysis of joint tail risk in-sample. We then build forecasting models for tourism demand and use them to generate scenario-based forecasts of electricity demand, with particular attention to municipalities identified as high-risk in the tail analysis. Combining the mean-effect and tail-risk blocks, the strategy delivers a forward-looking tool for scenario analysis and planning.
+
+\subsection{Mean-effect model}\label{sec:mean-effect-model}
+To understand the  average electricity consumption trend in Valle D'Aosta
+and what are the main drivers of it, we estimate a sequence of nested mixed-effects
+ models \citep{gelman2007data}. The baseline specification includes a municipality-specific random 
+intercept to capture unobserved heterogeneity and a set of fixed effects to 
+control for structural, meteorological, calendar and dynamic predictors. 
+The tourism effect is then added on top of this baseline in two alternative ways: 
+as a homogeneous effect across municipalities, and as an interaction with a tourism
+ intensity indicator to capture heterogeneous transmission. 
+Let $y_{it}$ denote logarithmic electricity consumption in municipality $i$ 
+at month $t$. The preferred mean-effect specification is the most saturated mixed model
+ in the sequence, namely $M4$:
+
+\begin{equation}
+\label{eq:m4}
+\begin{aligned}
+y_{it} = {} & \alpha + b_i + \beta_1 \text{ResMean}_{i} + \beta_2 \text{ResDev}_{it} + \beta_3 \text{Temp}_{it} + \beta_4 \text{Prec}_{it} + \beta_5 \text{Press}_{it} + \beta_6 \text{Hum}_{it} \\
+& + \sum_{h=1}^{3} \left[\gamma_h^{(s)} \sin\left(\frac{2\pi h m_t}{12}\right) + \gamma_h^{(c)} \cos\left(\frac{2\pi h m_t}{12}\right)\right] + \delta_{\text{year}(t)} + \rho_1 y_{i,t-1} + \rho_{12} y_{i,t-12} + \theta A_{it} + \varepsilon_{it}.
+\end{aligned}
+\end{equation}
+
+In equation~(\ref{eq:m4}), $\alpha$ is the overall intercept and $b_i \sim \mathcal{N}(0,\sigma_b^2)$ is the municipality-specific random intercept capturing time-invariant unobserved heterogeneity. The structural demographic component is constructed from
+
+$$
+R_{it} = \log(1 + \mathrm{residenti}_{it}),
+$$
+
+where $\mathrm{residenti}_{it}$ denotes the resident population in municipality $i$ at month $t$. We then define
+
+$$
+\text{ResMean}_{i} = \frac{1}{T_i}\sum_t R_{it}, \qquad \text{ResDev}_{it} = R_{it} - \text{ResMean}_{i},
+$$
+
+where $T_i$ is the number of monthly observations available for municipality $i$. Hence, $\text{ResMean}_{i}$ is the municipality-specific average log population over the sample period, while $\text{ResDev}_{it}$ is the within-municipality deviation from that average. The weather variables are ordered in the same way as they appear in equation~(\ref{eq:m4}): $\text{Temp}_{it}$ is monthly temperature, $\text{Prec}_{it}$ is logarithmic monthly precipitation, $\text{Press}_{it}$ is monthly atmospheric pressure, and $\text{Hum}_{it}$ is monthly relative humidity. The index $m_t \in \{1,\dots,12\}$ denotes the calendar month associated with observation $t$, so the harmonic terms for $h=1,2,3$ represent the first three Fourier seasonal components. The term $\delta_{\text{year}(t)}$ is a year fixed effect, with $\text{year}(t)$ denoting the calendar year of month $t$. The coefficients $\rho_1$ and $\rho_{12}$ multiply the one-month and twelve-month lags of log electricity consumption, namely $y_{i,t-1}$ and $y_{i,t-12}$. Finally, $A_{it}$ is logarithmic tourist arrivals in municipality $i$ at month $t$, $\theta$ is the corresponding tourism coefficient, and $\varepsilon_{it} \sim \mathcal{N}(0,\sigma_\varepsilon^2)$ is the idiosyncratic error term.
+
+In the empirical implementation, all numeric regressors are standardized before estimation, so $\theta$ can be interpreted as the semi-elastic effect of a one-standard-deviation increase in tourist arrivals on log electricity demand, conditional on municipality heterogeneity, meteorology, seasonality and lagged demand.
+
+The sequential models $M0, M0\text{-pop}, M1, M2, M3,$ and $M4$ are nested restrictions of the same equation, obtained by progressively setting subsets of coefficients equal to zero. This nesting structure makes the tourism contribution identifiable as the incremental improvement that arises when $\theta A_{it}$ is added on top of the structural, weather, calendar and dynamic blocks.
+
+\paragraph{Model validation.}
+
+Validation is formulated within the same likelihood-based framework. For each adjacent pair of nested models $M_k \subset M_{k+1}$ we compute the likelihood-ratio statistic
+
+$$
+\Lambda_{k,k+1} = 2\left\{\ell(\widehat{\vartheta}_{k+1}) - \ell(\widehat{\vartheta}_{k})\right\},
+$$
+
+where $\ell(\widehat{\vartheta}_{k})$ is the maximized log-likelihood under model $M_k$. We complement this with information criteria
+
+$$
+\mathrm{AIC}_k = -2\ell(\widehat{\vartheta}_k) + 2p_k, \qquad \mathrm{BIC}_k = -2\ell(\widehat{\vartheta}_k) + p_k \log n,
+$$
+
+and with marginal and conditional goodness-of-fit measures $R^2_{M,k}$ and $R^2_{C,k}$ for the fixed and full mixed-effects components. To monitor identification and numerical stability, for each regressor $x_j$ we compute the variance inflation factor
+
+$$
+\mathrm{VIF}_j = \frac{1}{1-R_j^2},
+$$
+
+where $R_j^2$ is obtained by projecting $x_j$ on the remaining predictors, and we also verify that the fitted mixed model is not singular. Finally, we assess robustness to the tourism specification by replacing observed arrivals with residualized arrivals,
+
+\begin{equation}
+\label{eq:atres}
+A^{\perp}_{it} = A_{it} - \widehat{\mathbb{E}}\left[A_{it} \mid \text{structure}_{it}, \text{weather}_{it}, \text{calendar}_{t}\right],
+\end{equation}
+
+and re-estimating the final model with $A^{\perp}_{it}$ in place of $A_{it}$. This validation step isolates the tourism signal that is orthogonal to the structural, meteorological and seasonal blocks and checks whether the main tourism effect survives once those shared components are removed.
+
+\subsection{Historical tail risk}
+
+The tail-risk analysis starts from two shock variables. The first is the electricity residual from the final mixed model,
+
+\begin{equation}
+\label{eq:eresid}
+e_{it} = y_{it} - \widehat{y}_{it}^{M4},
+\end{equation}
+
+where $y_{it}$ is observed log electricity consumption and $\widehat{y}_{it}^{M4}$ is the fitted value implied by equation~(\ref{eq:m4}). The second is the tourism residual $A^{\perp}_{it}$ already defined in equation~(\ref{eq:atres}). Thus, the pair $(e_{it}, A^{\perp}_{it})$ collects the remaining electricity and tourism shocks after removing the conditional mean dynamics captured by the mean-effect specification.
+
+Since the copula is estimated on marginally standardized shocks, we transform both series into pseudo-observations through empirical ranks:
+
+\begin{equation}
+\label{eq:pobs}
+U^E_{it} = \frac{\operatorname{rank}(e_{it})}{n+1}, \qquad U^T_{it} = \frac{\operatorname{rank}(A^{\perp}_{it})}{n+1},
+\end{equation}
+
+where $n$ is the number of observations in the sample used for copula estimation, $U^E_{it}$ is the pseudo-observation associated with the electricity residual, and $U^T_{it}$ is the pseudo-observation associated with the residualized tourism shock. By construction, $(U^E_{it}, U^T_{it}) \in (0,1)^2$.
+
+For each candidate family $f \in \mathcal{F}$, with
+
+$$
+\mathcal{F} = \{\text{Gaussian}, \text{Student-}t, \text{Clayton}, \text{Gumbel}, \text{Frank}\},
+$$
+
+we estimate the copula parameter vector by maximum likelihood:
+
+\begin{equation}
+\label{eq:copula-ml}
+\widehat{\theta}_f = \arg\max_{\theta \in \Theta_f} \sum_{i,t} \log c_f\left(U^E_{it}, U^T_{it}; \theta\right),
+\end{equation}
+
+where $\Theta_f$ is the admissible parameter space of family $f$ and $c_f(\cdot)$ denotes the corresponding copula density. The selected copula is the family that minimizes AIC, using BIC as a secondary ranking criterion. From the fitted copula we recover the lower- and upper-tail dependence coefficients:
+
+\begin{equation}
+\label{eq:taildep}
+\lambda_L = \lim_{q \downarrow 0} \Pr(U^E_{it} \le q \mid U^T_{it} \le q), \qquad
+\lambda_U = \lim_{q \uparrow 1} \Pr(U^E_{it} > q \mid U^T_{it} > q).
+\end{equation}
+
+Here $\lambda_L$ measures lower-tail co-movement and $\lambda_U$ measures upper-tail co-movement between electricity and tourism shocks.
+
+To localize risk, we complement the pooled copula with municipality-level co-exceedance measures. For a threshold $q \in \{0.90, 0.95\}$, define the exceedance indicators
+
+\begin{equation}
+\label{eq:indicators}
+I^E_{it}(q) = \mathbf{1}\{U^E_{it} \ge q\}, \qquad I^T_{it}(q) = \mathbf{1}\{U^T_{it} \ge q\}, \qquad J_{it}(q) = I^E_{it}(q) I^T_{it}(q).
+\end{equation}
+
+In equation~(\ref{eq:indicators}), $I^E_{it}(q)$ indicates whether the electricity residual falls in the upper tail at threshold $q$, $I^T_{it}(q)$ indicates the corresponding tourism-tail event, and $J_{it}(q)$ indicates joint exceedance.
+
+For each municipality $i$, we compute the conditional co-exceedance probability,
+
+\begin{equation}
+\label{eq:piq}
+p_i(q) = \Pr\left(U^E_{it} \ge q \mid U^T_{it} \ge q\right) \approx \frac{\sum_t J_{it}(q)}{\sum_t I^T_{it}(q)},
+\end{equation}
+
+the lift statistic,
+
+\begin{equation}
+\label{eq:lift}
+\mathrm{Lift}_i(q) = \frac{\Pr(U^E_{it} \ge q, U^T_{it} \ge q)}{\Pr(U^T_{it} \ge q)(1-q)},
+\end{equation}
+
+and the average joint severity,
+
+\begin{equation}
+\label{eq:severity}
+S_i(q) = \frac{1}{\sum_t J_{it}(q)} \sum_t J_{it}(q) \frac{U^E_{it} + U^T_{it}}{2},
+\end{equation}
+
+whenever the denominator is non-zero. Before defining the municipality ranking, it is important to clarify the role of weights in this setting. The composite-indicator literature stresses that weighting schemes are rarely identified from the data alone and typically reflect either normative priorities, expert judgement, or calibration to an external target; for this reason, weighting and robustness analysis are central methodological issues rather than innocuous technical details \cite{nardo2008,greco2018}. In our application, no external municipal benchmark such as outages, curtailment events, or network breaches is available to estimate optimal weights directly. We therefore treat the ranking score as a heuristic policy index and choose weights that place the greatest emphasis on the most severe conditional tail events at the 95th percentile, while still retaining information on broader upper-tail co-exceedance at the 90th percentile and on the average severity of joint extremes. This choice is also consistent with the tail-risk literature, where conservative tail-focused indices are often preferred when standard summary measures risk understating extreme co-movements \cite{furman2015,joe2014}.
+
+The municipality ranking is then based on the composite score
+
+\begin{equation}
+\label{eq:riskscore}
+R_i = 0.65\, p_i(0.95) + 0.25\, p_i(0.90) + 0.10\, S_i(0.95).
+\end{equation}
+
+In equation~(\ref{eq:riskscore}), $R_i$ is the municipality-level composite risk score, $p_i(0.95)$ is the conditional probability of an electricity upper-tail event given a tourism upper-tail event at the 95th percentile, $p_i(0.90)$ is the analogous quantity at the 90th percentile, and $S_i(0.95)$ is the average severity of joint exceedances at the 95th percentile. This design separates two objects: the copula captures region-wide tail dependence in the joint residual distribution, while the municipal score identifies where extreme tourism shocks are most likely to coincide with extreme electricity shocks.
+
+\paragraph{Tail-risk validation.}
+
+Validation of the tail-risk block operates along three dimensions. First, family selection is performed over the full candidate set $\mathcal{F}$ and evaluated through log-likelihood, AIC and BIC, so the preferred copula is data-driven rather than imposed ex ante. Second, dependence is checked both parametrically, through $(\lambda_L, \lambda_U)$, and non-parametrically, through municipality-level Kendall's $\tau$ and empirical co-exceedance frequencies. Third, the analysis is repeated on three samples: the pooled regional panel, the top 10 municipalities by empirical tail-risk score, and the top 10 municipalities by tourism intensity. This segmented validation is important because weak pooled dependence can mask stronger upper-tail co-movement in tourism-exposed local areas.
+
+The threshold choice is also validated internally by computing all empirical co-exceedance measures at both the 90th and 95th percentiles. The 90th percentile is informative about broader stress episodes, while the 95th percentile focuses on rarer and more operationally relevant extremes. Finally, copula estimation is only performed on samples with at least 50 observations, which imposes a minimum stability condition on the tail-risk exercise.
+
+\paragraph{Uncertainty quantification and shrinkage.}
+
+Because several municipalities record only a handful of upper-tail tourism events, the raw conditional probability $p_i(0.95)$ in equation~(\ref{eq:piq}) can be unstable: a single joint exceedance out of three tourism-tail events yields $p_i(0.95)=1/3$ on very thin evidence. We therefore add three layers of uncertainty quantification. First, we regularize the conditional co-exceedance probabilities through an empirical-Bayes (partial-pooling) random-intercept logit model. Writing $J_i$ and $T_i$ for the municipality counts of joint and tourism-tail exceedances at the 95th percentile, we fit
+\begin{equation}
+\label{eq:eb-shrinkage}
+J_i \mid T_i \sim \mathrm{Binomial}\!\left(T_i, \pi_i\right), \qquad
+\mathrm{logit}(\pi_i) = \mu + b_i, \qquad b_i \sim \mathcal{N}(0,\sigma_b^2),
+\end{equation}
+by maximum likelihood, and replace $p_i(0.95)$ by the shrunk posterior estimate $\widehat{\pi}_i^{\mathrm{EB}} = \mathrm{logit}^{-1}(\widehat{\mu}+\widehat{b}_i)$, which pulls data-poor municipalities toward the regional mean $\mathrm{logit}^{-1}(\widehat{\mu})$. The composite score is then recomputed as $R_i^{\mathrm{EB}}$ using $\widehat{\pi}_i^{\mathrm{EB}}$ in place of $p_i(0.95)$.
+
+Second, we attach interval estimates to the tail-dependence coefficient. For the pooled sample and for each municipality segment, we draw $B=1000$ nonparametric pair bootstrap resamples of the residual pairs, recompute the pseudo-observations, refit the selected copula family, and report the 2.5\% and 97.5\% percentiles of the bootstrap distribution of $\lambda_U$ (and of the copula parameter $\theta$). We explicitly flag any interval whose lower limit reaches zero, since this indicates that upper-tail dependence is not statistically distinguishable from independence. We complement these intervals with formal dependence diagnostics: an asymptotic Kendall's $\tau$ test, a permutation independence test (using Spearman's $\rho$ as a rank statistic under the permutation null), and a copula exchangeability test.
+
+Third, we quantify ranking uncertainty by a clustered (block) bootstrap over municipality-month observations: within each municipality we resample its rows with replacement, recompute $R_i$ from the resampled exceedance indicators, and re-rank all municipalities. Repeating this $B=1000$ times yields a 95\% percentile interval for each $R_i$ and the bootstrap probability that municipality $i$ falls in the regional top-10 and top-20, $\widehat{\Pr}(\text{rank}_i \le 10)$ and $\widehat{\Pr}(\text{rank}_i \le 20)$. These rank-inclusion probabilities make explicit that the ranking is a screening device subject to sampling variability rather than a deterministic ordering.
+
+\paragraph{External validation of the ranking.}
+
+Two further checks probe whether the composite score is informative beyond its construction. The first is a weight-sensitivity analysis: we recompute the ranking under the production weights $(0.65, 0.25, 0.10)$, under equal weights, under tail-only and severity-only weights, and under $500$ random weight vectors drawn from a symmetric Dirichlet on the simplex, reporting the rank correlation and top-10 overlap with the production ranking. The second is a benchmark comparison against realized 2025 positive electricity stress: we rank municipalities by five competing indicators—absolute tourism arrivals, arrivals per resident, an electricity-only extreme-frequency measure, historical average demand, and the proposed score $R_i$—and score each ranking by its Spearman correlation and top-10 overlap with the realized stress outcome.
+
+
+\subsection{Forecasting}
+This subsection develops scenario-based forecasts of electricity demand for policy analysis and planning. 
+The forecasting strategy has two blocks. 
+First, we forecast regional tourism demand and allocate it across municipalities using a 
+rule that preserves spatial heterogeneity. 
+Second, we propagate tourism scenarios through the municipality-assigned 
+electricity models to obtain load outcomes and stress indicators, 
+with emphasis on municipalities identified as high-risk in the historical tail analysis.
+
+\paragraph{Tourism forecasting.}
+The tourism forecasting block is organized in three steps: 
+(i) a regional time-series model for total monthly arrivals; 
+(ii) a spatial allocation rule that distributes the regional forecast across 
+the 74 municipalities; and (iii) a residual bootstrap that propagates 
+predictive uncertainty into validation and forward scenarios.
+
+\medskip
+\noindent\textit{(i) Regional model.} Let $X_t$ denote total monthly arrivals in Valle d'Aosta 
+and $x_t = \log(1+X_t)$. We compared automatic seasonal ARIMA, feed-forward neural networks (NNAR),
+ the mixed-effects models of section \ref{sec:mean-effect-model}, and a quantile gradient-boosted regression tree (QGBRT) 
+ fitted independently at $\tau\in\{0.05,0.50,0.95\}$; 
+ the four candidates were ranked on the 2025 out-of-sample validation window using MAE, RMSE, MAPE, 
+ bias and empirical 90\% coverage, and the NNAR specification was selected because
+  it dominates the other benchmarks on every error metric while 
+  remaining approximately unbiased (see Appendix~\ref{app:regional-model-comparison}, T
+  able~\ref{tab:regional-model-comparison}). The selected model is an autoregressive feed-forward neural 
+  network with $p$ recent lags, $P$ seasonal lags at period $m=12$, 
+  and a single hidden layer with $k$ units \citep{hyndman2021}:
+\begin{equation}
+\label{eq:nnar}
+\widehat{x}_t = \beta_0 + \sum_{j=1}^{k} \beta_j\, \phi\!\left(\gamma_{0j} + \sum_{\ell=1}^{p} \gamma_{\ell j}\, x_{t-\ell} + \sum_{s=1}^{P} \delta_{sj}\, x_{t-s m}\right) + \eta_t,
+\end{equation}
+where $\phi(\cdot)$ is the logistic activation, $(\beta,\gamma,\delta)$ are weights estimated by minimizing the in-sample squared error averaged over an ensemble of random initializations, and $\eta_t$ is the residual. The fitted model is denoted $\mathrm{NNAR}(p,P,k)_{m}$ with $m=12$.
+
+\medskip
+\noindent\textit{(ii) Spatial allocation.} The regional forecast is converted into municipality-level arrivals through a share-based rule. This step is needed because policy decisions and network stress are local, while the most reliable forecast is estimated at regional level. A static benchmark (BASE) would keep each municipality at its long-run average share of regional arrivals; this is coherent but too rigid when local composition shifts over time. Our production rule, \textsc{Method F + meteo}, is designed to solve that trade-off: first, it builds a robust recent seasonal baseline (to track structural change without overreacting to outliers); second, it applies a weather-based correction (to capture predictable month-specific reallocations across municipalities). The two stages produce, for each comune $i$ and target month $t^{*}$, a blended share $\widetilde{s}_{i,t^{*}}$, which is renormalized to one each month and applied to the regional total, so forecasts remain regionally coherent while allowing realistic local redistribution. The relative weight of the weather correction is governed by a mixing intensity $\lambda$, set to $\lambda = 0.10$ (with $\varepsilon$ a numerical floor); for validation months, weather inputs are observed, while for the forward horizon they are replaced by monthly meteorological climatology. The full mathematical definition is reported in Appendix~\ref{app:alloc-technical}, equations~\eqref{eq:share-F}--\eqref{eq:share-blend}.
+
+The municipal forecast is finally obtained by disaggregating the regional projection, i.e. multiplying the blended municipal share $\widetilde{s}_{i,t^{*}}$ by the regional arrivals forecast $\widehat{X}_{t^{*}}$ from the NNAR model in \eqref{eq:nnar}:
+\begin{equation}
+\label{eq:alloc}
+\widehat{a}_{i,t^{*}} \;=\; \widetilde{s}_{i,t^{*}} \cdot \widehat{X}_{t^{*}}.
+\end{equation}
+
+\medskip
+\noindent\textit{(iii) Bootstrap and uncertainty.} Predictive intervals are obtained by a block bootstrap on the regional residuals \citep{bergmeir2016}. We generate $B$ bootstrap series $\{x_t^{(b)}\}$ via STL decomposition and moving-block resampling, refit \eqref{eq:nnar} on each, and simulate a joint validation–forward path $\widehat{X}_{t^{*}}^{(b)}$ for $t^{*}$ spanning the 9-month 2025 validation window and the 12-month forward horizon. Applying \eqref{eq:alloc} to every replicate yields the empirical predictive distribution at both regional and municipal level, from which the 5\%, 50\% and 95\% quantiles and the bagged mean are extracted. The forecasting performance of the BASE and \textsc{Method F + meteo} rules is compared on the 2025 validation block using MAE, RMSE, MAPE, the relative total error, the empirical 90\% coverage, and the share of municipalities flagged as implausible.
+
+\medskip
+\noindent The choice of \textsc{Method F + meteo} as the production rule is itself the outcome of an out-of-sample selection, not an a priori assumption. Conceptually, BASE tends to optimize aggregate fit but can generate implausible allocations in smaller and highly seasonal comuni; more flexible municipality-specific models reduce that rigidity but may overfit idiosyncratic noise. \textsc{Method F + meteo} is the compromise that performs best on this bias-variance trade-off: it substantially lowers the implausibility rate (about 6.8\% vs.\ 10.8\% for BASE) while preserving comparable aggregate accuracy and regional bias. This is why it is used as the production allocation rule. The full model horse-race and metrics are reported in Appendix~\ref{app:alloc-comparison}.
+
+\paragraph{Tail-risk forecasting.}
+The forecasting strategy for the tail-risk block is organized in two steps. 
+First, we generate scenario-based forecasts of electricity demand by feeding the tourism forecasts 
+into the mean-effect model. Second, we evaluate the resulting distribution of electricity demand 
+against the historical tail-risk evidence, with particular attention to the high-tourism municipalities
+identified in the previous step. This step is not a formal forecast validation exercise, 
+since the tail-risk analysis is based on historical co-movements rather than out-of-sample predictive performance, but 
+it provides a forward-looking policy tool that can be used for scenario analysis and planning.
+In practice, after selecting the municipality-level forecasting model, we replace the tourism input with the scenario path (actual versus q95 arrivals) while keeping the other predictors fixed, and we obtain scenario-based forecasts of electricity demand.
+From a mathematical perspective, we can write the mean-effect model as:
+\begin{equation}
+\label{eq:mean-effect-forecast}
+\begin{aligned}
+\hat y_{it}^{(m)}(a) &= f_m\!\left(z_{it},a\right), \qquad m\in\{\text{Mixed},\text{GAMM},\text{Prophet}\},\\
+\hat y_{it}^{\text{base}} &= \hat y_{it}^{(m_i)}\!\left(a_{it}\right),\\
+\hat y_{it}^{\text{q95}}  &= \hat y_{it}^{(m_i)}\!\left(a_{it}^{95}\right),\\
+\hat L_{it}^{\text{base}} &= \exp\!\left(\hat y_{it}^{\text{base}}\right)-1,\\
+\hat L_{it}^{\text{q95}}  &= \exp\!\left(\hat y_{it}^{\text{q95}}\right)-1,\\
+\Delta L_{it} &= \hat L_{it}^{\text{q95}}-\hat L_{it}^{\text{base}},\\
+\Delta L_{it}^{(\%)} &= 100\left(\frac{\hat L_{it}^{\text{q95}}}{\hat L_{it}^{\text{base}}}-1\right).
+\end{aligned}
+\end{equation}
+
+where $m_i$ is the municipality-level assigned model from the validation-based assignment rule; 
+$a_{it}=\log(1+\text{arrivals}_{it})$ is observed tourism input; 
+$a_{it}^{95}=\log(1+\text{arrivals}_{it}^{95})$ is the bootstrap q95 tourism scenario input; and 
+$z_{it}$ collects the non-tourism predictors (meteorology, seasonality, lags and dynamic controls). 
+Hence, the scenario block replaces the tourism predictor while keeping all other predictors unchanged, and computes the implied level and percentage load impact. The baseline load path $L_{it}^{\mathrm{base}}$ is therefore the conditional mean forecast from the single model assigned to municipality $i$, evaluated at the observed arrivals path, rather than an average across all candidate models.
+
+
+\subsection{From Historical Tail Risk to Forward Extreme Stress}
+
+This section links the forward tourism-shock forecast from equation~(\ref{eq:mean-effect-forecast}) to the historical tail-risk diagnostics from equations~(\ref{eq:piq}) and (\ref{eq:riskscore}). Let $\Delta L_{it}$ denote the forecasted load shock for municipality $i$ and month $t$ under the q95 tourism scenario, and let $p_i(0.95)$ and $R_i$ be the municipality-specific conditional tail probability and composite risk score estimated on the historical sample.
+
+We define the forecast-conditioned tail-impact at municipality-month level as
+\begin{equation}
+\label{eq:scenario-tail-impact}
+I_{it}^{\mathrm{tail}} = \Delta L_{it}\, p_i(0.95),
+\end{equation}
+which scales the deterministic scenario shock by the municipality's historical propensity to co-exceed in the upper tail.
+To prioritize municipalities where exposure and vulnerability are jointly high, we further define the weighted impact
+\begin{equation}
+\label{eq:scenario-tail-impact-weighted}
+I_{it}^{\mathrm{w}} = I_{it}^{\mathrm{tail}}\, R_i
+= \Delta L_{it}\, p_i(0.95)\, R_i.
+\end{equation}
+
+Annual municipality-level stress indicators are obtained by temporal aggregation:
+\begin{equation}
+\label{eq:scenario-annual-aggregation}
+\mathcal{I}_{i}^{\mathrm{tail}} = \sum_{t \in \mathcal{T}} I_{it}^{\mathrm{tail}},
+\qquad
+\mathcal{I}_{i}^{\mathrm{w}} = \sum_{t \in \mathcal{T}} I_{it}^{\mathrm{w}},
+\end{equation}
+where $\mathcal{T}$ is the forecast horizon (in our application, monthly 2025 scenarios).
+
+The regional monthly indicators are
+\begin{equation}
+\label{eq:scenario-regional-aggregation}
+\mathcal{I}_{t,\mathrm{reg}}^{\mathrm{tail}} = \sum_i I_{it}^{\mathrm{tail}},
+\qquad
+\mathcal{I}_{t,\mathrm{reg}}^{\mathrm{w}} = \sum_i I_{it}^{\mathrm{w}},
+\end{equation}
+which summarize, respectively, expected tail-linked stress and risk-weighted tail-linked stress at system level.
+
+Finally, municipalities are ranked by $\mathcal{I}_{i}^{\mathrm{w}}$ to identify where forward extreme pressure is most policy-relevant. This ranking preserves a clear decomposition between forecasted exposure ($\Delta L_{it}$), historical conditional dependence ($p_i(0.95)$), and structural vulnerability ($R_i$).
+
+
+
+
+\section{Main Results}
+
+\subsection{Historical Association between Tourism and Electricity Demand}
+
+Table~\ref{tab:mean-models} reports the key model comparisons. Adding tourism arrivals to the dynamic specification improves fit relative to the baseline dynamic model, and the heterogeneous tourism specification performs best among the current alternatives.
+
+\begin{table}[H]
+\centering
+\caption{Model comparison for the main mean-effect specifications.}
+\label{tab:mean-models}
+\begin{tabular}{lrrrrr}
+\toprule
+Model & AIC & BIC & LogLik & $R^2_M$ & $R^2_C$ \\
+\midrule
+$M3$ base & -3629.79 & -3476.12 & 1837.89 & 0.9821 & NA \\
+$M4$ arrivals & -3703.17 & -3542.81 & 1875.58 & 0.9823 & 0.9824 \\
+$M4$ arrivals $\times$ temperature & -3702.87 & -3535.83 & 1876.43 & 0.9822 & 0.9824 \\
+$M4$ heterogeneous arrivals & -3741.79 & -3568.07 & 1896.89 & 0.9824 & 0.9825 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The estimated coefficient on arrivals in the benchmark tourism model is positive and precisely estimated ($\hat\beta = 0.0342$, standard error $0.0037$). In the heterogeneous model, the baseline arrivals effect remains positive ($0.0195$), while the interaction with tourism-intensive municipalities is also positive ($0.0323$), indicating stronger transmission in high-tourism locations.
+
+Two additional points are important for interpretation. First, information criteria show that adding tourism to the dynamic benchmark materially improves fit (AIC from $-3629.79$ to $-3703.17$), and allowing heterogeneous transmission improves fit again (AIC to $-3741.79$). Thus, tourism contributes explanatory power both as an average effect and as a municipality-specific amplifier.
+
+Second, the heterogeneous specification implies a sizable gradient across space: in tourism-intensive municipalities, the effective arrivals effect is the sum of the baseline and interaction terms ($0.0195 + 0.0323 = 0.0518$), about 2.7 times the baseline component alone. This is consistent with local economic structure: where hospitality and seasonal services are more concentrated, a comparable tourism shock generates a stronger electricity-demand response.
+
+The relatively small changes in $R^2$ across final specifications should be read in context. Because the model already includes strong persistence and seasonal controls, much baseline variation is absorbed before tourism enters; in this setting, economically meaningful tourism effects may appear as modest incremental gains in aggregate fit metrics while remaining statistically and policy relevant.
+
+\begin{figure}[H]
+\centering
+\meanfig{model_comparison_metrics.png}
+\caption{Model comparison across the nested mean-effect specifications.}
+\label{fig:model-comparison}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\meanfig{coef_m4_turismo.png}
+\caption{Estimated coefficients for the final tourism specification.}
+\label{fig:coef-m4}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\meanfig{mean_effect_key_coefficients.png}
+\caption{Key coefficients from the tourism extensions: benchmark, interaction with temperature, and heterogeneous tourism effect.}
+\label{fig:key-coefficients}
+\end{figure}
+
+\subsection{Tail dependence and localized risk}
+
+The pooled residual dependence is best described by a Gumbel copula, indicating asymmetric dependence concentrated in the upper tail. The estimated upper-tail dependence is modest in the pooled sample ($\lambda_U \approx 0.030$), with no evidence of lower-tail dependence. Crucially, a nonparametric pair bootstrap ($B=1000$) shows that this pooled coefficient is not statistically distinguishable from zero: its 95\% percentile interval is $[0.000, 0.014]$, and the pooled Kendall's $\tau$ is essentially null and insignificant ($\tau=-0.007$, $p=0.44$). In plain terms, at the regional level very high tourism shocks are \emph{not} reliably associated with very high electricity shocks once the conditional mean is removed. Once the analysis is localized, the picture changes: upper-tail dependence rises to $0.087$ for the top 10 municipalities by empirical tail risk and to $0.065$ for the top 10 municipalities by tourism intensity, and in both cases the bootstrap intervals exclude zero ($[0.055, 0.182]$ and $[0.060, 0.178]$, respectively) while Kendall's $\tau$ is positive and highly significant ($\tau=0.089$, $p<0.001$ in both segments). Hence, the tourism--electricity extreme-event linkage is real but concentrated in specific municipalities rather than being strong and uniform across the whole region.
+
+\begin{table}[H]
+\centering
+\caption{Copula summary by sample segment. The final column reports the $95\%$ percentile bootstrap interval for the upper-tail dependence coefficient ($B=1000$ pair-resamples). The pooled interval includes zero; both localized intervals exclude it.}
+\label{tab:copula-segments}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Segment & Obs. & Family & LogLik & AIC & BIC & $\lambda_U$ & $\lambda_U$ 95\% CI \\
+\midrule
+All municipalities & 5892 & Gumbel & 6.491 & -10.983 & -4.301 & 0.030 & $[0.000,\,0.014]$ \\
+Top 10 tail-risk municipalities & 804 & Gumbel & 14.855 & -27.711 & -23.021 & 0.087 & $[0.055,\,0.182]$ \\
+Top 10 tourism-intensity municipalities & 804 & Gumbel & 13.231 & -24.461 & -19.771 & 0.065 & $[0.060,\,0.178]$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{figure}[H]
+\centering
+\tailfig{tail_risk_map_score.png}
+\caption{Historical geographical distribution of the municipality-level joint tail-risk score.}
+\label{fig:tailrisk-map}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\tailfig{tail_risk_vs_tourism_scatter.png}
+\caption{Tail-risk score and tourism intensity. The positive association is clear but not one-to-one.}
+\label{fig:scatter-risk-tourism}
+\end{figure}
+
+\subsection{Historically most exposed municipalities}
+
+As reported in Table~\ref{tab:top-tailrisk}, the tail-risk ranking 
+identifies a small group of municipalities where extreme tourism and
+ electricity shocks tend to coincide more often than elsewhere. 
+ In practical terms, these are the places where a tourism surge 
+ is most likely to translate into an electricity-stress episode, 
+ because the local system combines high exposure with a non-negligible
+  probability of co-extreme residual shocks. 
+  The leading municipalities are Gressoney-Saint-Jean,
+   Brusson, Ayas, Gressan, Torgnon, Chamois, La Thuile 
+   and Rh\^emes-Notre-Dame. Some of them are highly tourism-intensive,
+    but the overlap is not complete: 
+    only four municipalities appear in both the 
+    top-10 tail-risk list and the top-10 tourism-intensity list,
+     so tourism intensity alone does not fully explain vulnerability.  
+     Figure \ref{fig:scatter-risk-tourism} shows that the correlation between 
+    the tail-risk score and tourism intensity is positive but not perfect, 
+      which confirms that tourism is an important driver of risk but not the only one.
+    In practise, there many municipality in which the risk score is elevated,
+    but the tourism intensity is not.  For example, Gressan has a risk score of 0.376 but only 0.76 arrivals per resident, 
+    while Chamois has a risk score of 0.336 but 3.33 arrivals per resident.
+     The correlation between the empirical risk score and arrivals per resident 
+     is approximately 0.61, which means that tourism pressure is an 
+     important driver of risk, but local tail dependence and 
+     municipality-specific structure still matter materially.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Top municipalities by empirical tail risk. The $R_i$ 95\% CI is the percentile interval from a clustered (municipality-block) bootstrap ($B=1000$), and $P(\text{top-}10)$ is the bootstrap probability that the municipality falls in the regional top-10. Data-poor municipalities (few joint-95 events) have very wide intervals and lower inclusion probabilities.}
+\label{tab:top-tailrisk}
+\begin{tabular}{lrrlrr}
+\toprule
+Municipality & Risk score & $P(E\mid T)_{95}$ & $R_i$ 95\% CI & $P(\text{top-}10)$ & Arr./res. \\
+\midrule
+Gressoney-Saint-Jean & 0.387 & 0.333 & $[0.019,\,0.853]$ & 0.64 & 2.80 \\
+Brusson & 0.386 & 0.333 & $[0.000,\,0.915]$ & 0.62 & 2.02 \\
+Ayas & 0.383 & 0.333 & $[0.031,\,0.788]$ & 0.86 & 3.93 \\
+Gressan & 0.376 & 0.333 & $[0.000,\,0.996]$ & 0.62 & 0.76 \\
+Torgnon & 0.356 & 0.333 & $[0.000,\,0.872]$ & 0.62 & 1.90 \\
+Chamois & 0.336 & 0.250 & $[0.000,\,0.729]$ & 0.64 & 3.33 \\
+La Thuile & 0.323 & 0.222 & $[0.185,\,0.490]$ & 0.92 & 5.53 \\
+Rh\^emes-Notre-Dame & 0.290 & 0.154 & $[0.186,\,0.416]$ & 0.87 & 9.08 \\
+Saint-Vincent & 0.280 & 0.200 & $[0.013,\,0.494]$ & 0.76 & 1.13 \\
+Valtournenche & 0.280 & 0.143 & $[0.057,\,0.433]$ & 0.76 & 4.54 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The two right-most columns of Table~\ref{tab:top-tailrisk} make the fragility of the raw ranking explicit. Municipalities whose score rests on only one or two joint exceedances at the 95th percentile---Gressoney-Saint-Jean, Brusson, Gressan, Torgnon and Chamois---have extremely wide risk-score intervals (for example $[0.000, 0.915]$ for Brusson) and top-10 inclusion probabilities near $0.62$, meaning that their leading position is not robust to resampling. By contrast, La Thuile and Rh\^emes-Notre-Dame, which accumulate many more tail observations, have much tighter intervals and inclusion probabilities above $0.87$. This motivates the empirical-Bayes correction reported next.
+
+\subsection{Shrinkage and ranking stability}
+
+Because the raw conditional probabilities $p_i(0.95)$ are estimated from very few tail events, we regularize them with the empirical-Bayes random-intercept logit model in equation~(\ref{eq:eb-shrinkage}). The fitted regional baseline is $\widehat{\pi}^{\mathrm{EB}} = 0.116$, and each municipality is pulled toward this value in proportion to how little tail evidence it carries. The effect on the ranking is substantial precisely where it should be: municipalities whose raw score reflected a single joint exceedance out of three tourism-tail events ($p_i(0.95)=1/3$) are shrunk back toward the regional mean, while municipalities with more exceedance evidence rise. After shrinkage, the top of the ranking is led by Rh\^emes-Notre-Dame, La Thuile and Cogne---all data-rich municipalities---whereas Gressan, Torgnon and Saint-Vincent leave the top-10 and Cogne, Gressoney-La-Trinit\'e and Champorcher enter it. Seven of the original top-10 remain, confirming that the broad message is stable while the precise ordering of data-poor municipalities is not. Table~\ref{tab:shrinkage} summarizes the largest movements.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Effect of empirical-Bayes shrinkage on the tail-risk ranking. $p_i^{\mathrm{raw}}$ and $p_i^{\mathrm{EB}}$ are the raw and shrunk conditional probabilities $p_i(0.95)$; $T_i$ is the number of tourism upper-tail events. Municipalities with few events are pulled toward the regional baseline $0.116$ and drop in rank.}
+\label{tab:shrinkage}
+\begin{tabular}{lrrrrr}
+\toprule
+Municipality & $T_i$ & $p_i^{\mathrm{raw}}$ & $p_i^{\mathrm{EB}}$ & Rank (raw) & Rank (EB) \\
+\midrule
+Rh\^emes-Notre-Dame & 26 & 0.154 & 0.125 & 8 & 1 \\
+La Thuile & 18 & 0.222 & 0.137 & 7 & 2 \\
+Cogne & 8 & 0.125 & 0.116 & 12 & 3 \\
+Ayas & 6 & 0.333 & 0.132 & 3 & 6 \\
+Gressoney-Saint-Jean & 3 & 0.333 & 0.124 & 1 & 7 \\
+Gressan & 3 & 0.333 & 0.124 & 4 & 11 \\
+Torgnon & 3 & 0.333 & 0.124 & 5 & 13 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Forward extreme stress under tourism q95 scenarios}
+
+Using the integration framework in
+ equations~(\ref{eq:scenario-tail-impact})--(\ref{eq:scenario-regional-aggregation}), 
+ we combine the forecasted tourism shock with historical 
+ municipality-level tail-risk dependence to quantify 
+ forward stress for 2025. At regional level, 
+ total assigned load increases from 252.05 GWh 
+ in the baseline path to 257.15 GWh under the q95 tourism scenario,
+  implying an annual shock of 5.10 GWh (+2.03\%). 
+  The corresponding tail-conditioned impact is 0.857 GWh, 
+  and the risk-weighted impact is 0.279 GWh.
+
+\begin{figure}[H]
+\centering
+\scenfig{scenario_shock_delta_kwh_map.png}
+\caption{Annual scenario shock under q95 tourism arrivals,
+ measured as q95 minus actual load.}
+\label{fig:scenario-shock-delta}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\scenfig{scenario_tail_impact_kwh_map.png}
+\caption{Annual scenario-tail impact after weighting 
+the load shock by historical conditional tail dependence.}
+\label{fig:scenario-tail-impact-map}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\scenfig{scenario_tail_impact_weighted_map.png}
+\caption{Annual risk-weighted scenario-tail impact combining exposure,
+ tail dependence and municipality vulnerability.}
+\label{fig:scenario-tail-weighted-map}
+\end{figure}
+
+Stress is concentrated in winter and late summer months. The largest monthly regional shock occurs in February 2025 (916.3 MWh, +2.91\%), which is also the month with the highest weighted tail-impact (54.4 MWh). September shows the highest percentage shock (+3.62\%), indicating that tail-relevant pressure is not purely a winter phenomenon.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Regional scenario summary by month for 2025.}
+\label{tab:scenario-regional-summary}
+\begin{tabular}{lrrrr}
+\toprule
+Month & Shock (MWh) & Weighted tail impact (MWh) & Shock (\%) \\
+\midrule
+Jan & 583.3 & 35.1 & 1.55 \\
+Feb & 916.3 & 54.4 & 2.91 \\
+Mar & 673.2 & 38.4 & 2.11 \\
+Apr & 461.1 & 23.7 & 1.71 \\
+May & 282.9 & 13.6 & 1.20 \\
+Jun & 207.3 & 10.6 & 0.87 \\
+Jul & 515.0 & 26.6 & 1.95 \\
+Aug & 653.8 & 33.1 & 2.35 \\
+Sep & 811.3 & 43.1 & 3.62 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+At municipality level, the forward weighted ranking is led by Ayas, Valtournenche, Gressan, and Saint-Vincent, with Courmayeur and Torgnon immediately after. This pattern is consistent with the historical tail-risk evidence but not identical to a pure tourism-intensity ordering, confirming that exposure and dependence jointly shape forward stress.
+
+\begin{figure}[H]
+\centering
+\scenfig{scenario_tail_top20_weighted.png}
+\caption{Top 20 municipalities by weighted scenario-tail impact.}
+\label{fig:scenario-top20-weighted}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Top municipalities by weighted scenario-tail impact in 2025. The table reports the municipality risk score with its clustered-bootstrap $95\%$ interval, the bootstrap probability of falling in the regional top-10, the conditional upper-tail probability $P(E\mid T)_{95}$, the annual tail impact in MWh, and the annual weighted impact in MWh.}
+\label{tab:scenario-top-weighted}
+\begin{tabular}{lrlrrrr}
+\toprule
+Municipality & Risk score & $R_i$ 95\% CI & $P(\text{top-}10)$ & $P(E\mid T)_{95}$ & Tail impact (MWh) & Weighted impact (MWh) \\
+\midrule
+Ayas & 0.383 & $[0.031,\,0.788]$ & 0.86 & 0.333 & 302.8 & 116.0 \\
+Valtournenche & 0.280 & $[0.057,\,0.433]$ & 0.76 & 0.143 & 151.0 & 42.2 \\
+Gressan & 0.376 & $[0.000,\,0.996]$ & 0.62 & 0.333 & 97.2 & 36.5 \\
+Saint-Vincent & 0.280 & $[0.013,\,0.494]$ & 0.76 & 0.200 & 91.1 & 25.5 \\
+Courmayeur & 0.221 & $[0.019,\,0.355]$ & 0.50 & 0.125 & 79.9 & 17.7 \\
+Torgnon & 0.356 & $[0.000,\,0.872]$ & 0.62 & 0.333 & 47.5 & 16.9 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The columns in Table~\ref{tab:scenario-top-weighted} summarize four distinct layers of the scenario ranking. The risk score is the historical municipality-level composite from the tail-risk block; $P(E\mid T)_{95}$ is the probability that an electricity upper-tail event occurs when a tourism upper-tail event is observed; the tail impact converts the q95 load shock into annual MWh; and the weighted impact further down-weights municipalities with weaker historical tail transmission. As a result, Ayas is the most exposed municipality not only because its raw scenario shock is large, but also because its historical tourism-to-electricity tail linkage is strong.
+
+To assess whether this forward indicator is informative for realized stress, we compare the municipalities ranked highest by predicted weighted scenario-tail impact with the municipalities that actually exhibit the largest positive stress residuals in 2025. Here realized risk is measured at municipality-month level as the positive part of the gap between observed load and the baseline assigned load, namely $r_{it}^{\mathrm{real}} = \max\!\left(L_{it}^{\mathrm{actual}} - L_{it}^{\mathrm{base}}, 0\right)$, where $L_{it}^{\mathrm{base}}$ is the load obtained under the actual-arrivals baseline path. Negative gaps are set to zero because the object of interest is excess stress above the expected baseline, not load shortfalls. Here $k$ is the cut-off size of the ranked list, so $k=10$ means that the ten highest-ranked municipalities in the predicted list are compared with the ten highest-ranked municipalities in the realized list. Rank association is moderate but clearly positive (Spearman $\rho=0.315$ for weighted impacts; Pearson $r=0.285$). In top-$k$ targeting terms, overlap is 6/10 for $k=10$ (precision/recall 0.60), and average monthly hit rate for top-10 municipalities is 0.467. These diagnostics suggest that the scenario-tail indicator is useful as a prioritization tool, while still reflecting non-negligible uncertainty at municipality-month resolution.
+
+\begin{figure}[H]
+\centering
+\scenfig{scenario_tail_validation_topk_precision.png}
+\caption{Top-$k$ precision validation for predicted versus realized stressed municipalities. The predicted set is the ranking by weighted scenario-tail impact, while the realized set is the ranking by positive 2025 stress residual. Each curve shows how much of the predicted stressed set is also found among realized stressed municipalities as $k$ grows.}
+\label{fig:scenario-topk-validation}
+\end{figure}
+
+Figure~\ref{fig:scenario-topk-validation} shows that the ranking is informative but not perfect: the top-10 overlap is 6/10 and the top-20 overlap is 11/20, so the model recovers a substantial share of the realized stress concentration while still missing some municipality-month episodes. Together with the 0.467 average monthly hit rate, this supports using the scenario-tail ranking as a screening and prioritization device rather than as an exact point forecast of stress.
+
+\subsection{Robustness of the composite score and benchmark comparison}
+
+Two further exercises probe how much the ranking depends on its construction and whether it carries information beyond simpler indicators. First, we recompute the ranking under alternative weighting schemes. Table~\ref{tab:weight-sensitivity} shows that the production ranking is highly robust to the choice of weights: equal weights, $q90$-only weights, and even $500$ random weight vectors drawn from a symmetric Dirichlet on the simplex all produce rank correlations above $0.98$ with the production ordering and top-10 overlaps of at least $8/10$ on average. Only the extreme tail-only and severity-only schemes move the ranking appreciably (rank correlations of $0.90$ and $0.89$). The composite score is therefore not an artefact of one particular weight vector.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Weight-sensitivity of the tail-risk composite score. Each row recomputes $R_i$ under a different weighting of $(p_i(0.95), p_i(0.90), S_i(0.95))$ and reports the Spearman rank correlation and top-10 overlap with the production weights $(0.65, 0.25, 0.10)$. The random-simplex rows summarize $500$ Dirichlet draws.}
+\label{tab:weight-sensitivity}
+\begin{tabular}{lrr}
+\toprule
+Weighting scheme & Rank corr. vs production & Top-10 overlap \\
+\midrule
+Production $(0.65,0.25,0.10)$ & 1.000 & 10 \\
+Equal $(1/3,1/3,1/3)$ & 0.999 & 9 \\
+Tail-only $(1,0,0)$ & 0.902 & 9 \\
+$q90$-only $(0,1,0)$ & 0.982 & 8 \\
+Severity-only $(0,0,1)$ & 0.892 & 7 \\
+Random simplex (mean) & 0.996 & 8.7 \\
+Random simplex ($5$th--$95$th pct.) & 0.986--1.000 & 8--10 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Second, we benchmark the composite score against four competing rankings, scoring each against realized 2025 positive electricity stress (Table~\ref{tab:benchmark}). The result is deliberately reported in full because it is informative about the score's intended use. When the target is the \emph{absolute} magnitude of realized stress, a simple historical-average-demand ranking performs best (Spearman $0.80$), because absolute stress is dominated by municipality size. The proposed $R_i$, which is by construction a size-normalized tail-dependence index rather than a demand-level predictor, attains a lower Spearman correlation ($0.33$) against absolute stress. This is the honest and expected outcome: $R_i$ is designed to flag where tourism and electricity extremes \emph{co-move}, not to forecast which municipality consumes the most energy. Its added value is the localized tail-dependence information in Table~\ref{tab:copula-segments}, which no demand-level benchmark captures.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Benchmark comparison of five municipality rankings against realized 2025 positive electricity stress. Higher Spearman and overlap indicate better recovery of the absolute realized-stress ordering. The size-driven historical-average-demand benchmark leads on absolute stress, whereas $R_i$ is a size-normalized tail-dependence index (see text).}
+\label{tab:benchmark}
+\begin{tabular}{lrr}
+\toprule
+Ranking indicator & Spearman vs realized & Top-10 overlap \\
+\midrule
+Historical average demand & 0.798 & 7 \\
+Electricity-only extreme frequency & 0.505 & 6 \\
+Tourism intensity (arrivals) & 0.428 & 7 \\
+Proposed score $R_i$ & 0.326 & 5 \\
+Arrivals per resident & 0.075 & 6 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Finally, propagating the existing $B$ forecast bootstrap replicates through the tail-impact mapping of equations~(\ref{eq:scenario-tail-impact})--(\ref{eq:scenario-tail-impact-weighted}) yields wide predictive intervals for the risk-weighted regional impact whose $95\%$ bands comfortably include zero. This reinforces the interpretation of the forward ranking as a prioritization screen subject to substantial predictive uncertainty rather than a calibrated point forecast.
+
+\section{Discussion}
+
+Three substantive messages emerge. First, tourism is robustly associated with the conditional mean of electricity demand in a policy-relevant way. Because the design is observational, this association is interpreted as a conditional-mean relationship after adjustment for the included covariates, not as a causal effect. Second, the residual dependence structure of extremes is not strong at the pooled regional level, which suggests that much of the tourism--energy relationship is already absorbed by the mean-effect specification. Third, once the analysis is localized, extreme co-movements become more visible. This implies that tail risk is not a uniform regional phenomenon but a municipality-specific vulnerability.
+
+These findings also help frame the interpretation of the Gumbel copula. A Gumbel fit implies asymmetric upper-tail dependence: when tourism shocks are unusually high, the probability of a simultaneous unusually high electricity shock is elevated relative to independence, but the magnitude remains limited in the aggregate sample. This is consistent with a system where tourism mainly affects average demand and only locally amplifies extreme demand pressure.
+
+Three caveats deserve emphasis, and the uncertainty analysis makes them explicit. First, the design is observational: tourism arrivals are not randomly assigned, so all estimates are conditional-mean associations after adjustment for the included covariates, not causal effects. Second, the pooled upper-tail dependence is statistically indistinguishable from zero---its $95\%$ bootstrap interval is $[0.000, 0.014]$ and the pooled Kendall's $\tau$ is insignificant---so the extreme tourism--electricity linkage should be claimed only at the localized level, where the bootstrap intervals exclude zero. Third, the municipality ranking is a screening device, not a deterministic ordering. The clustered bootstrap shows that several historically top-ranked municipalities owe their position to a single joint exceedance and carry very wide risk-score intervals and top-10 inclusion probabilities near $0.62$; empirical-Bayes shrinkage accordingly pulls these data-poor municipalities back toward the regional baseline ($\widehat{\pi}^{\mathrm{EB}}=0.116$) and promotes data-rich municipalities such as Rh\^emes-Notre-Dame and La Thuile, changing three of the ten top positions. The robust message is the broad concentration of vulnerability in a small set of tourism-exposed municipalities, not the exact rank of any individual one.
+
+\section{Conclusion}
+
+This paper combines mixed-effects modelling and copula-based tail-risk analysis to study how tourism relates to municipal electricity demand in Valle d'Aosta. The evidence indicates a clear positive association between tourism arrivals and the conditional mean of electricity demand and suggests that this association is stronger in more tourism-intensive municipalities. In contrast, residual tail dependence is weak in the pooled sample but increases in a subset of municipalities characterized by higher joint tourism-energy vulnerability. This points to a pragmatic interpretation: tourism matters broadly for average electricity demand, whereas extreme joint stress is a localised issue.
+
+Building on this evidence, the forecasting and scenario block translates the local tail-risk diagnostics into a forward-looking prioritization tool: a regional NNAR tourism forecast is allocated to municipalities and propagated through the assigned electricity models to produce q95 stress rankings, which recover a substantial share of realized 2025 positive stress (top-10 overlap 6/10) while remaining a screening device rather than an exact point forecast. A natural next step is to extend this framework to the small set of highly seasonal municipalities that no candidate model could forecast reliably, and to richer scenario designs beyond the q95 tourism shock.
+
+\section*{Data Availability and Reproducibility}
+
+All figures and empirical assets used in this manuscript are generated from the project repository. The paper is designed to read the current empirical outputs stored under \texttt{Modelli/meanEffect/report\_assets}, \texttt{Modelli/Tail Risk/report\_assets} and \texttt{Modelli/Scenarios/report\_assets}, with the supporting forecasting tables under \texttt{Modelli/Forecast/report\_assets}. The mean-effect, tail-risk and forecasting/scenario blocks are all included in the present draft and can be regenerated from the corresponding scripts in the repository.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\appendix
+
+\section{Appendix: Mean-effect figures}
+
+\begin{figure}[p]
+\centering
+\meanfig{coef_m0_popolazione.png}
+\caption{Coefficient plot for the structural baseline model.}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\meanfig{coef_m1_meteo.png}
+\caption{Coefficient plot for the meteorological specification.}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\meanfig{coef_m2_calendario.png}
+\caption{Coefficient plot for the calendar specification.}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\meanfig{coef_m3_dinamica.png}
+\caption{Coefficient plot for the dynamic specification.}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\meanfig{mean_effect_model_compare.png}
+\caption{Alternative model comparison for the tourism-focused mean-effect models.}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\meanfig{tourism_model_compare.png}
+\caption{Tourism model comparison diagnostic from the report assets.}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\meanfig{final_model_residuals.png}
+\caption{Residual diagnostics for the final mean-effect model.}
+\end{figure}
+
+\section{Appendix: Municipal allocation comparison}
+\label{app:alloc-comparison}
+
+\subsection{Technical definition of the spatial allocation rule}
+\label{app:alloc-technical}
+
+Let $i \in \{1,\dots,N\}$ index the $N=74$ municipalities and $\tau \in \{1,\dots,12\}$ the calendar month. Denote by $a_{i,t}$ observed arrivals in comune $i$ at month $t$ and by $A_t = \sum_i a_{i,t}$ the regional total, so the realized share is $s_{i,t} = a_{i,t} / A_t$. The baseline rule (BASE) sets each future share equal to the historical mean $\bar{s}_i = T^{-1}\sum_t s_{i,t}$, which assumes a stable spatial distribution. To relax this assumption we use \textsc{Method F + meteo}, built in two stages.
+
+\emph{Stage A -- temporally weighted seasonal share.} Within a rolling 3-year window $\mathcal{W}_t$ preceding the forecast origin, we compute an exponentially weighted seasonal share using a weighted median:
+\begin{equation}
+\label{eq:share-F}
+s^{\mathrm F}_{i,\tau} \;=\; \operatorname{wmedian}\!\left(\{ s_{i,u} : u \in \mathcal{W}_t,\; \text{month}(u)=\tau \},\; w_u\right), \qquad w_u = \alpha_F^{\,t - u},
+\end{equation}
+with halflife of 12 months, i.e. $\alpha_F = 0.5^{1/12}$. The resulting shares are renormalized so that $\sum_i s^{\mathrm F}_{i,\tau} = 1$ for every $\tau$.
+
+\emph{Stage B -- meteorological adjustment.} For each comune $i$ we fit a weather-only weighted least-squares model on the log-share residual, using as covariates $w_{i,t} = (\mathrm{Temp}_{i,t}, \mathrm{Prec}_{i,t}, \mathrm{Press}_{i,t}, \mathrm{Hum}_{i,t})$ and exponentially decayed weights $\omega_t = \alpha_W^{\,t_0 - t}$ with $\alpha_W = 0.7$:
+\begin{equation}
+\label{eq:wls-meteo}
+\widehat{\boldsymbol{\zeta}}_i \;=\; \arg\min_{\boldsymbol{\zeta}_i} \sum_{t} \omega_t \left[ \log\!\frac{s_{i,t}}{s^{\mathrm F}_{i,\text{month}(t)}} - \boldsymbol{\zeta}_i^{\top} w_{i,t} \right]^{2}, \qquad
+\Delta_{i,t} \;=\; \widehat{\boldsymbol{\zeta}}_i^{\top} w_{i,t}.
+\end{equation}
+The blended share at any target month $t^{*}$ is then
+\begin{equation}
+\label{eq:share-blend}
+\widetilde{s}_{i,t^{*}} \;\propto\; \exp\!\left\{\log\!\bigl(s^{\mathrm F}_{i,\text{month}(t^{*})} + \varepsilon\bigr) + \lambda \, \Delta_{i,t^{*}} \right\},
+\qquad \sum_i \widetilde{s}_{i,t^{*}} = 1.
+\end{equation}
+
+Table~\ref{tab:alloc-comparison} reports the out-of-sample performance of the twelve allocation rules considered for distributing the regional tourism forecast across the 74 municipalities of Valle d'Aosta. All metrics are computed on the nine-month 2025 validation window with the same regional NNAR backbone, so differences across rows are attributable only to the allocation step. The columns are: median and mean municipal MAPE; median and mean of the absolute relative total error $|\hat{A}_i - A_i|/A_i$; total regional MAE; the share of comuni with $|\text{rel.\ total}| > 0.5$ or $> 1.0$; the share of comuni with $\mathrm{MAPE} > 0.75$; and the overall implausibility rate (the union of $|\text{rel.\ total}|>0.5$ and $\mathrm{MAPE}>0.75$).
+
+\begin{table}[H]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{Out-of-sample comparison of municipal allocation strategies on the 2025 validation window (74 comuni). Lower values are better in every column. The selected production rule is highlighted in bold. $\lambda$ refers to the meteo-blend intensity in eq.~\eqref{eq:share-blend}.}
+\label{tab:alloc-comparison}
+\begin{tabular}{lrrrrr}
+\toprule
+Method & Med. MAPE & Med. $|\text{rel.\ tot}|$ & Total MAE & \% rel.\ $>50\%$ & \% impl. \\
+\midrule
+BASE static share                            & 0.207 & 0.097 & 20\,222 & 4.1 & 10.8 \\
+A: expw + weather                            & 0.322 & 0.155 & 38\,329 & 14.9 & 18.9 \\
+B: ETS + reconcile                           & 0.407 & 0.220 & 48\,528 & 20.3 & 25.7 \\
+C: BASE + shrunk A ($\lambda{=}0.10$)        & 0.212 & 0.094 & 20\,295 & 5.4 & 12.2 \\
+D: BASE + meteo ($\lambda{=}0.10$)           & 0.223 & 0.096 & 21\,183 & 4.1 & 10.8 \\
+E: NNAR per comune                           & 0.261 & 0.117 & 25\,185 & 13.5 & 23.0 \\
+F: expw median 3yr                           & 0.216 & 0.104 & 19\,991 & 4.1 &  8.1 \\
+G: adaptive + winsor                         & 0.206 & 0.096 & 19\,664 & 2.7 &  8.1 \\
+H: volume shrinkage                          & 0.220 & 0.097 & 19\,855 & 5.4 & 12.2 \\
+\textbf{F + meteo ($\lambda{=}0.10$) [sel.]} & 0.222 & 0.097 & 21\,017 & 4.1 & \textbf{6.8} \\
+G + meteo ($\lambda{=}0.10$)                 & 0.213 & 0.093 & 20\,477 & 2.7 &  8.1 \\
+H + meteo ($\lambda{=}0.10$)                 & 0.230 & 0.103 & 20\,525 & 5.4 & 12.2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The baseline static share is hard to beat on aggregate accuracy because the spatial distribution of arrivals is dominated by a small set of high-volume comuni whose long-run shares are stable. However, BASE produces 10.8\% of implausible municipalities, concentrated in small comuni where the static share misses structural changes in the share trajectory. \textsc{Method A} (exp-weighted weather-conditioned shares) and \textsc{Method B} (per-comune ETS + reconciliation) overfit to recent comune-specific volatility and worsen every metric. Per-comune \textsc{Nnar} (\textsc{Method E}) suffers from the same small-sample issue and from the absence of coherence with the regional total. The BASE++ family (\textsc{F/G/H}) improves on BASE by reducing implausibles to 8.1--12.2\% while keeping the headline accuracy. Adding the weather-only blend on top of \textsc{F} (\textsc{F+meteo}) is the only configuration that further reduces the implausibility rate to 6.8\%, achieving a Pareto improvement over BASE (lower implausibility, comparable median accuracy, comparable regional bias). This is consistent with the diagnostic finding that the residual implausible comuni after \textsc{F+meteo} are five small mountain villages with sparse and very seasonal arrivals, for which no allocation rule based on regional reconciliation is expected to recover the local dynamics. The full per-comune metrics and the bootstrap-based intervals are stored in the project repository under \texttt{Modelli/Forecast/report\_assets/allocation\_comparison\_*.csv}.
+
+\section{Appendix: Regional model comparison}
+\label{app:regional-model-comparison}
+
+Table~\ref{tab:regional-model-comparison} reports the out-of-sample performance of the four regional benchmarks evaluated on the same nine-month 2025 validation window (74 comuni aggregated to the regional total). All models are trained on data up to 2024-12-31 and produce 9 monthly forecasts. We compare: (i) \textsc{Multilevel}, the production mixed-effects model summed across comuni; (ii) \textsc{Auto.arima}, an automatic seasonal ARIMA on the regional log-arrivals series; (iii) \textsc{Nnetar}, a feed-forward neural net with one hidden layer and lagged inputs, eq.~\eqref{eq:nnar}; and (iv) \textsc{Qgbrt}, a quantile gradient-boosted regression tree (\texttt{gbm}) fitted independently at $\tau\in\{0.05, 0.50, 0.95\}$ on harmonic and lag features. Metrics are mean absolute error (MAE), root mean square error (RMSE), mean absolute percentage error (MAPE), bias, and empirical 90\% interval coverage.
+
+\begin{table}[H]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{6pt}
+\caption{Regional model comparison on the 2025 validation window. Lower is better for MAE, RMSE, MAPE and $|$bias$|$; coverage~90\% should be close to the nominal 0.90. The production regional backbone is highlighted in bold. $^\dagger$Best 1-layer deep NN (BoxCox, 16 units) from independent script.}
+\label{tab:regional-model-comparison}
+\begin{tabular}{lrrrrr}
+\toprule
+Model & MAE & RMSE & MAPE & Bias & Cov.\ 90\% \\
+\midrule
+Multilevel (sum of comuni)                  & 63\,051 & 67\,977 & 0.438 & $-63\,051$ & 1.00 \\
+Auto.arima                                  & 14\,609 & 18\,851 & 0.104 & $-14\,609$ & 1.00 \\
+\textbf{Nnetar (selected)}                  & \textbf{9\,591}  & \textbf{11\,983} & \textbf{0.075} & $+1\,831$  & 1.00 \\
+Qgbrt ($\tau\in\{0.05,0.50,0.95\}$)         & 16\,459 & 23\,602 & 0.096 & $-14\,322$ & 0.56 \\
+1-layer deep NN (BoxCox, 16u)$^\dagger$     & 14\,231 & 21\,227 & 0.096 & $-10\,435$ & 0.44 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textsc{Nnetar} is the most accurate point-forecaster on every error metric (MAPE 7.5\%, MAE about 9.6k) and is approximately unbiased, motivating its adoption as the regional backbone for the production pipeline. \textsc{Auto.arima} comes second but exhibits a persistent negative bias, consistent with its inability to fully capture the post-pandemic recovery in arrivals. The naive sum of the per-comune mixed-effects forecasts underperforms strongly at the regional level (MAPE 43.8\%): the model is fit to maximise per-comune fit and the comune-level negative biases accumulate when aggregated. The quantile boosted trees achieve a respectable point-forecast accuracy (MAPE 9.6\%) but their 90\% interval, constructed as $[\hat{q}_{0.05}, \hat{q}_{0.95}]$ from independent quantile fits, covers only 56\% of the realised values, reflecting the well-known under-coverage of marginally fitted boosted quantiles on short validation samples. The best 1-layer deep NN (BoxCox, 16 units) from the independent script is included for direct comparison: it is competitive with QGBRT and auto.arima, but does not outperform the production NNAR. The empirical coverage of \textsc{Nnetar}, \textsc{Auto.arima} and the multilevel benchmark is exactly 1.00, indicating that on this nine-month window the parametric bootstrap intervals are conservative; this is expected given the small validation horizon and is in line with results reported by \citet{hyndman2021} and \citet{bergmeir2016} on bootstrap-based prediction intervals at monthly frequency. The numbers in Table~\ref{tab:regional-model-comparison} are reproduced from \texttt{Modelli/Forecast/report\_assets/tourism\_arrivals\_model\_comparison\_metrics.csv} and can be regenerated by running the forecasting script with the lightweight flag \texttt{--mode=select}, which skips the bootstrap simulations.
+
+\section{Appendix: Tail-risk figures}
+
+\begin{figure}[p]
+\centering
+\tailfig{municipality_tail_risk_top20.png}
+\caption{Top 20 municipalities by empirical joint tail-risk score.}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\tailfig{tail_risk_map_conditional95.png}
+\caption{Probability of an extreme electricity residual conditional on an extreme tourism residual at the 95th percentile threshold.}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\tailfig{tail_risk_map_tourism_intensity.png}
+\caption{Tourism intensity map measured by arrivals per resident.}
+\end{figure}
+
+\clearpage
+
+\section{Appendix: Notes for completion}
+
+\begin{itemize}
+  \item Add journal-specific front matter, affiliations, acknowledgements and funding statements once the target outlet is fixed.
+  \item If the target journal requires a supplementary appendix, move the full figure archive and extended municipality tables there.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,4 @@
+"family","parameter","estimate","std_error","sample","selected_family","lower_tail","upper_tail"
+"gumbel","param_1",1.02236586963104,0.00685694974622765,"all_comuni","gumbel",0,0.0300986010438458
+"gumbel","param_1",1.06855417455084,0.0154922153709778,"top10_tail_risk","gumbel",0,0.0869905665921176
+"gumbel","param_1",1.05034606985036,0.011811293840373,"top10_tourism_intensity","gumbel",0,0.0653572815034009

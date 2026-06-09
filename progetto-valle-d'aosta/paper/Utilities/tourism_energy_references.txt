@@ -1,0 +1,39 @@
+References on tourism and electricity/energy demand
+=================================================
+
+1. Bakhat, Mohcine, and Jaume Rossello. 2011.
+   "Estimation of tourism-induced electricity consumption: The case study of Balearics Islands, Spain."
+   Energy Economics 33(3): 437-444.
+   DOI: 10.1016/j.eneco.2010.12.009
+   Notes: Probably the closest paper to this project. It studies daily electricity demand in the Balearic Islands and uses daily tourist stocks to estimate the aggregate contribution of tourism to electricity consumption.
+
+2. Bianco, Vincenzo. 2020.
+   "Analysis of electricity consumption in the tourism sector: A decomposition approach."
+   Journal of Cleaner Production 248: 119286.
+   DOI: 10.1016/j.jclepro.2019.119286
+   Notes: Focuses on electricity consumption in the Italian tourism sector using index decomposition analysis. Useful for motivating why tourism changes electricity demand, even if it is not a regional causal panel design.
+
+3. Margosi, Maria, Foivos Palaiogiannis, Athanasios Vassilakis, and Georgios Koukoufikis. 2022.
+   "Energy, tourism and COVID-19: An analysis of energy consumption trends in EU islands during the pandemic."
+   JRC Technical Report, European Commission, JRC128377.
+   DOI: 10.2760/63482
+   Notes: Links electricity consumption patterns and tourism during the pandemic across nine EU islands and island groups. Useful as evidence that tourism dependence is reflected in electricity demand dynamics.
+
+4. The Impact of Tourism on Energy Consumption: A Sectoral Analysis for the Most Visited Countries in the World. 2023.
+   Economies 11(10): 263.
+   Notes: Cross-country panel study on tourism and final energy consumption across sectors in the most visited countries. Useful for the broader tourism-energy nexus literature, but more macro than this project.
+
+5. Soylu, O. B., A. N. Menegaki, and Y. Bayraktar. 2024.
+   "Energy usage trends in top tourist destinations: the role of tourism and trade."
+   Energy Sources, Part B: Economics, Planning, and Policy 19(1): 1-15.
+   Notes: Panel evidence on major tourist destinations. Useful as recent background on the role of tourism in energy usage, but again more aggregated than a regional or municipal electricity-demand study.
+
+6. Osorio-Molina, Francisco M., Rocio Munoz-Benito, and David Perez-Neira. 2023.
+   "Empirical evidence, methodologies and perspectives on tourism, energy and sustainability: A systematic review."
+   Annals of Tourism Research Empirical Insights.
+   Notes: Systematic review on tourism, energy, and sustainability. Useful for positioning the paper and arguing that most of the literature is more aggregate than a municipality-level regional electricity-demand analysis.
+
+Suggested positioning for the paper
+===================================
+
+The literature already documents a tourism-energy nexus and, in a smaller number of cases, its reflection in electricity demand. The closest benchmark appears to be Bakhat and Rossello (2011) for the Balearic Islands. The main contribution of the Valle d'Aosta study is likely to come from its finer territorial scale, its explicit focus on electricity demand, and its richer controls for weather, seasonality, population structure, and local heterogeneity.

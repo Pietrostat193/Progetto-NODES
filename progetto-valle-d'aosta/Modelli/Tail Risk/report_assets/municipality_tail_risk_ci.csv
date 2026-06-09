@@ -1,0 +1,74 @@
+"comune_key","comune_nome","risk_score_point","risk_score_boot_mean","risk_score_lo","risk_score_hi","risk_rank_point"
+"gressoney saint jean","Gressoney-Saint-Jean",0.387119504173636,0.343079877097322,0.0192307692307692,0.853265337506969,1
+"brusson","Brusson",0.386372855607541,0.342490235594133,0,0.914944284178969,2
+"ayas","Ayas",0.383172767896169,0.384367454448114,0.03125,0.788444208611713,3
+"gressan","Gressan",0.375662509191696,0.330507206566036,0,0.99649584252503,4
+"torgnon","Torgnon",0.355804909779965,0.305538849093534,0,0.872471576446632,5
+"chamois","Chamois",0.33573519429832,0.297752624291753,0,0.7291875752507,6
+"la thuile","La Thuile",0.323305331239346,0.321748759488381,0.185284541223903,0.489580819432691,7
+"rhemes notre dame","Rhêmes-Notre-Dame",0.289852590495414,0.287440741362172,0.18562996936247,0.415975564284201,8
+"saint vincent","Saint-Vincent",0.280098913072602,0.271118944194262,0.0131578947368421,0.493864353288405,9
+"valtournenche","Valtournenche",0.27967474493287,0.263239608703607,0.0568090175953079,0.432615518537934,10
+"gressoney la trinite","Gressoney-La-Trinité",0.277430239626065,0.27625685677856,0.161371096025983,0.406089979535269,11
+"cogne","Cogne",0.271361534486216,0.244335168840234,0.0468394886363636,0.506933578821192,12
+"courmayeur","Courmayeur",0.221425714882891,0.208699670680787,0.0192073170731707,0.354637728899037,13
+"bard","Bard",0.190864585100967,0.190599251300815,0.127304237242183,0.261991385141505,14
+"champorcher","Champorcher",0.166666666666667,0.158109821428571,0,0.25,15
+"valsavarenche","Valsavarenche",0.16520575067686,0.127081191568022,0.0131494601889339,0.247058641443229,16
+"pre saint didier","Pré-Saint-Didier",0.129679479311003,0.0948150278988064,0,0.196048249256144,17
+"jovencan","Jovençan",0.0555555555555556,0.0555379518690374,0,0.138888888888889,18
+"pollein","Pollein",0.0434782608695652,0.0430673877381204,0.01,0.0869565217391304,19
+"valgrisenche","Valgrisenche",0.025,0.0258339111449696,0,0.0833333333333333,20
+"antey saint andre","Antey-Saint-André",0.00490196078431373,0.0050203965185272,0,0.0159574468085106,21
+"etroubles","Etroubles",0,0,0,0,22
+"issogne","Issogne",0,0,0,0,23
+"saint christophe","Saint-Christophe",0,0,0,0,24
+"pont saint martin","Pont-Saint-Martin",0,0,0,0,25
+"quart","Quart",0,0,0,0,26
+"morgex","Morgex",0,0,0,0,27
+"ollomont","Ollomont",0,0,0,0,28
+"pontboset","Pontboset",0,0,0,0,29
+"aosta","Aosta",0,0,0,0,30
+"la magdeleine","La Magdeleine",0,0,0,0,31
+"chatillon","Châtillon",0,0,0,0,32
+"saint oyen","Saint-Oyen",0,0,0,0,33
+"saint pierre","Saint-Pierre",0,0,0,0,34
+"gignod","Gignod",0,0,0,0,35
+"challand saint anselme","Challand-Saint-Anselme",0,0,0,0,36
+"bionaz","Bionaz",0,0,0,0,37
+"valpelline","Valpelline",0,0,0,0,38
+"saint nicolas","Saint-Nicolas",0,0,0,0,39
+"rhemes saint georges","Rhêmes-Saint-Georges",0,0,0,0,40
+"charvensod","Charvensod",0,0,0,0,41
+"gaby","Gaby",0,0,0,0,42
+"brissogne","Brissogne",0,0,0,0,43
+"fenis","Fénis",0,0,0,0,44
+"montjovet","Montjovet",0,0,0,0,45
+"sarre","Sarre",0,0,0,0,46
+"perloz","Perloz",0,0,0,0,47
+"emarese","Emarèse",0,0,0,0,48
+"la salle","La Salle",0,0,0,0,49
+"oyace","Oyace",0,0,0,0,50
+"chambave","Chambave",0,0,0,0,51
+"aymavilles","Aymavilles",0,0,0,0,52
+"donnas","Donnas",0,0,0,0,53
+"arnad","Arnad",0,0,0,0,54
+"nus","Nus",0,0,0,0,55
+"saint denis","Saint-Denis",0,0,0,0,56
+"saint marcel","Saint-Marcel",0,0,0,0,57
+"verres","Verrès",0,0,0,0,58
+"introd","Introd",0,0,0,0,59
+"challand saint victor","Challand-Saint-Victor",0,0,0,0,60
+"allein","Allein",0,0,0,0,61
+"fontainemore","Fontainemore",0,0,0,0,62
+"doues","Doues",0,0,0,0,63
+"roisan","Roisan",0,0,0,0,64
+"hone","Hône",0,0,0,0,65
+"champdepraz","Champdepraz",0,0,0,0,66
+"verrayes","Verrayes",0,0,0,0,67
+"arvier","Arvier",0,0,0,0,68
+"villeneuve","Villeneuve",0,0,0,0,69
+"lillianes","Lillianes",0,0,0,0,70
+"pontey","Pontey",0,0,0,0,71
+"issime","Issime",0,0,0,0,72
+"avise","Avise",0,0,0,0,73

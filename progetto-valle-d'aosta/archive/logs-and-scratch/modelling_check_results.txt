@@ -1,0 +1,7 @@
+analysis_df_exists=TRUE
+analysis_df_dim=5892x37
+resid_final=TRUE
+arrivi_destag_weather_z=TRUE
+date=FALSE
+comune_key=TRUE
+comune_nome=FALSE

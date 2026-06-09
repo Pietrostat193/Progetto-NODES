@@ -1,0 +1,225 @@
+station_id,station_name,municipality,location,altitude_masl,year,parameter,annual_mean_value,n_months_with_data
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2019,precipitazione,2.382686705506989,12
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2019,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2019,temperatura,4.699467721902372,12
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2019,umidit_relativa,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2020,precipitazione,2.3761432455815106,12
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2020,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2020,temperatura,4.84832220986281,12
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2020,umidit_relativa,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2021,precipitazione,2.593069789628929,12
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2021,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2021,temperatura,3.931131084803221,12
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2021,umidit_relativa,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2022,precipitazione,1.906442652329749,12
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2022,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2022,temperatura,5.474383000512033,12
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2022,umidit_relativa,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2023,precipitazione,3.719764464925755,12
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2023,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2023,temperatura,5.261971326164875,12
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2023,umidit_relativa,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2024,precipitazione,4.271714456391876,12
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2024,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2024,temperatura,5.134014954888148,12
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2024,umidit_relativa,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2025,precipitazione,3.317936507936508,9
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2025,pressione,,0
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2025,temperatura,6.267814767731342,9
+3550,Gressoney-la-Trinit - D'Ejola,Gressoney-la-Trinit,D'Ejola,1837,2025,umidit_relativa,,0
+3560,Roisan - Preyl,Roisan,Preyl,935,2019,precipitazione,2.232512218963832,11
+3560,Roisan - Preyl,Roisan,Preyl,935,2019,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,935,2019,temperatura,11.245111411268253,12
+3560,Roisan - Preyl,Roisan,Preyl,935,2019,umidit_relativa,63.8774355324258,12
+3560,Roisan - Preyl,Roisan,Preyl,935,2020,precipitazione,1.5386763070077865,12
+3560,Roisan - Preyl,Roisan,Preyl,935,2020,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,935,2020,temperatura,11.288093251761216,12
+3560,Roisan - Preyl,Roisan,Preyl,935,2020,umidit_relativa,65.78667284637251,12
+3560,Roisan - Preyl,Roisan,Preyl,935,2021,precipitazione,1.4791783077878742,11
+3560,Roisan - Preyl,Roisan,Preyl,935,2021,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,935,2021,temperatura,10.610032421385313,12
+3560,Roisan - Preyl,Roisan,Preyl,935,2021,umidit_relativa,65.569419372495,12
+3560,Roisan - Preyl,Roisan,Preyl,935,2022,precipitazione,1.191463133640553,12
+3560,Roisan - Preyl,Roisan,Preyl,935,2022,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,935,2022,temperatura,12.455810931899642,12
+3560,Roisan - Preyl,Roisan,Preyl,935,2022,umidit_relativa,59.88642345110087,12
+3560,Roisan - Preyl,Roisan,Preyl,935,2023,precipitazione,1.8167872592121757,12
+3560,Roisan - Preyl,Roisan,Preyl,935,2023,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,935,2023,temperatura,12.0805325140809,12
+3560,Roisan - Preyl,Roisan,Preyl,935,2023,umidit_relativa,62.55598310291859,12
+3560,Roisan - Preyl,Roisan,Preyl,935,2024,precipitazione,2.4771623477389144,12
+3560,Roisan - Preyl,Roisan,Preyl,935,2024,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,935,2024,temperatura,11.592909096527004,12
+3560,Roisan - Preyl,Roisan,Preyl,935,2024,umidit_relativa,67.98017055988134,12
+3560,Roisan - Preyl,Roisan,Preyl,935,2025,precipitazione,2.2933894672962776,9
+3560,Roisan - Preyl,Roisan,Preyl,935,2025,pressione,,0
+3560,Roisan - Preyl,Roisan,Preyl,935,2025,temperatura,12.91568527052398,9
+3560,Roisan - Preyl,Roisan,Preyl,935,2025,umidit_relativa,67.06160712739722,9
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2019,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2019,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2019,temperatura,12.559482846902203,12
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2019,umidit_relativa,55.67194124423963,12
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2020,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2020,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2020,temperatura,12.028436819638156,12
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2020,umidit_relativa,57.75478461348317,12
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2021,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2021,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2021,temperatura,11.638680235535075,12
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2021,umidit_relativa,56.51517281105991,12
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2022,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2022,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2022,temperatura,13.229626856118792,12
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2022,umidit_relativa,52.55855350742448,12
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2023,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2023,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2023,temperatura,12.981156554019458,12
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2023,umidit_relativa,53.9719777265745,12
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2024,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2024,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2024,temperatura,12.40590532690644,12
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2024,umidit_relativa,59.18917593622544,12
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2025,precipitazione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2025,pressione,,0
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2025,temperatura,14.19289469192695,9
+4000,Aosta - Piazza Plouves,Aosta,Piazza Plouves,580,2025,umidit_relativa,56.226553166069294,9
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2019,precipitazione,1.6153393639415146,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2019,pressione,948.3311239119304,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2019,temperatura,11.917093573988735,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2019,umidit_relativa,62.59990079365079,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2020,precipitazione,1.3161775772806548,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2020,pressione,949.7987078235076,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2020,temperatura,11.514539611914472,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2020,umidit_relativa,65.88706772957607,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2021,precipitazione,1.308664389003655,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2021,pressione,949.2859363799283,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2021,temperatura,10.893735919098823,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2021,umidit_relativa,64.67022902431273,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2022,precipitazione,1.1412541713014461,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2022,pressione,950.734709487614,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2022,temperatura,12.350139948267033,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2022,umidit_relativa,60.67821092660275,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2023,precipitazione,1.5177713773681516,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2023,pressione,948.7518170762929,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2023,temperatura,12.190298899129544,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2023,umidit_relativa,60.675337241506824,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2024,precipitazione,2.356582622667161,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2024,pressione,949.2898547769126,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2024,temperatura,11.560946112965024,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2024,umidit_relativa,66.73621326300693,12
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2025,precipitazione,1.9071076033923642,9
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2025,pressione,949.5170037549069,9
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2025,temperatura,13.423725891790408,9
+4020,Aosta - Mont-Fleury,Aosta,Mont-Fleury,577,2025,umidit_relativa,63.80096906615817,9
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2019,precipitazione,2.461557859703021,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2019,pressione,834.2283947772657,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2019,temperatura,5.971554019457246,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2019,umidit_relativa,64.11086725550436,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2020,precipitazione,2.331361389197874,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2020,pressione,837.0594098380917,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2020,temperatura,6.149982078853046,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2020,umidit_relativa,65.37243480410332,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2021,precipitazione,2.2405606758832564,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2021,pressione,836.9760739887353,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2021,temperatura,5.247247823860727,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2021,umidit_relativa,66.70072132616488,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2022,precipitazione,1.9852529265321257,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2022,pressione,838.5603840245776,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2022,temperatura,7.015954941116232,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2022,umidit_relativa,61.94581029185868,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2023,precipitazione,2.756669226830517,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2023,pressione,837.416284562212,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2023,temperatura,6.615844214029698,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2023,umidit_relativa,64.3195513312852,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2024,precipitazione,3.415433815350389,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2024,pressione,837.4756028303053,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2024,temperatura,6.480070448646645,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2024,umidit_relativa,68.05367723396367,12
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2025,precipitazione,2.603294077487626,9
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2025,pressione,838.1481327871651,9
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2025,temperatura,7.669342891278376,9
+4050,La Thuile - Les Granges,La Thuile,Les Granges,1637,2025,umidit_relativa,66.87463218979349,9
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2019,precipitazione,1.7287007168458781,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2019,pressione,820.9480792370712,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2019,temperatura,5.400609959037379,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2019,umidit_relativa,61.00429467485919,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2020,precipitazione,1.203536027685082,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2020,pressione,822.2607461994809,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2020,temperatura,5.460668026201953,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2020,umidit_relativa,62.54881102459523,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2021,precipitazione,1.6121223758320533,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2021,pressione,821.4495417306707,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2021,temperatura,4.588214925755248,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2021,umidit_relativa,63.39274129544291,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2022,precipitazione,1.166614359870756,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2022,pressione,823.3101514690044,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2022,temperatura,6.3836668167452375,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2022,umidit_relativa,58.61127288698201,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2023,precipitazione,2.0445455709165388,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2023,pressione,821.8395417306708,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2023,temperatura,5.977125576036866,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2023,umidit_relativa,61.28053059395801,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2024,precipitazione,3.0297979236188355,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2024,pressione,822.363679705846,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2024,temperatura,5.816666666666667,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2024,umidit_relativa,64.94635459152144,12
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2025,precipitazione,2.121483011694358,9
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2025,pressione,823.4696620583717,9
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2025,temperatura,7.079701314217444,9
+4070,Cogne - Gimillan,Cogne,Gimillan,1785,2025,umidit_relativa,63.38531490015361,9
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2019,precipitazione,1.5413417465614352,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2019,pressione,866.5893605990783,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2019,temperatura,7.636716589861751,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2019,umidit_relativa,62.31923899129544,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2020,precipitazione,1.5008756643183785,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2020,pressione,867.718325608701,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2020,temperatura,7.6578747991595595,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2020,umidit_relativa,64.12586114200964,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2021,precipitazione,1.6035483870967742,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2021,pressione,866.8695916538659,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2021,temperatura,6.884823348694316,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2021,umidit_relativa,64.30769841269841,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2022,precipitazione,1.5745762487419885,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2022,pressione,868.3604977753059,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2022,temperatura,8.61151782403729,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2022,umidit_relativa,60.0060369105002,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2023,precipitazione,1.876578341013825,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2023,pressione,866.5764522529441,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2023,temperatura,8.355876216077828,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2023,umidit_relativa,62.05254416282642,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2024,precipitazione,2.4761234705228032,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2024,pressione,866.863228278334,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2024,temperatura,8.143413978494623,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2024,umidit_relativa,66.41602181436164,12
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2025,precipitazione,2.220279911247653,9
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2025,pressione,867.5740885816692,9
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2025,temperatura,9.076052227342549,9
+4080,Etroubles - Chevrire,Etroubles,Chevrire,1339,2025,umidit_relativa,69.29877624167946,9
+4110,Donnas - Clapey,Donnas,Clapey,318,2019,precipitazione,3.4146863799283156,12
+4110,Donnas - Clapey,Donnas,Clapey,318,2019,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,318,2019,temperatura,13.466997567844341,12
+4110,Donnas - Clapey,Donnas,Clapey,318,2019,umidit_relativa,64.57743215565796,12
+4110,Donnas - Clapey,Donnas,Clapey,318,2020,precipitazione,2.3989809665059947,12
+4110,Donnas - Clapey,Donnas,Clapey,318,2020,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,318,2020,temperatura,13.282247250030899,12
+4110,Donnas - Clapey,Donnas,Clapey,318,2020,umidit_relativa,65.78806606105549,12
+4110,Donnas - Clapey,Donnas,Clapey,318,2021,precipitazione,2.5627662570404506,12
+4110,Donnas - Clapey,Donnas,Clapey,318,2021,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,318,2021,temperatura,12.787892345110087,12
+4110,Donnas - Clapey,Donnas,Clapey,318,2021,umidit_relativa,64.92370519713262,12
+4110,Donnas - Clapey,Donnas,Clapey,318,2022,precipitazione,1.611162314388121,12
+4110,Donnas - Clapey,Donnas,Clapey,318,2022,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,318,2022,temperatura,14.132197900665643,12
+4110,Donnas - Clapey,Donnas,Clapey,318,2022,umidit_relativa,61.48155721966206,12
+4110,Donnas - Clapey,Donnas,Clapey,318,2023,precipitazione,2.150062724014337,12
+4110,Donnas - Clapey,Donnas,Clapey,318,2023,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,318,2023,temperatura,13.952796979006656,12
+4110,Donnas - Clapey,Donnas,Clapey,318,2023,umidit_relativa,64.01213581669226,12
+4110,Donnas - Clapey,Donnas,Clapey,318,2024,precipitazione,4.09988443950068,12
+4110,Donnas - Clapey,Donnas,Clapey,318,2024,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,318,2024,temperatura,13.689326412062787,12
+4110,Donnas - Clapey,Donnas,Clapey,318,2024,umidit_relativa,68.00374315818281,12
+4110,Donnas - Clapey,Donnas,Clapey,318,2025,precipitazione,4.104778972520908,9
+4110,Donnas - Clapey,Donnas,Clapey,318,2025,pressione,,0
+4110,Donnas - Clapey,Donnas,Clapey,318,2025,temperatura,15.069673152415088,9
+4110,Donnas - Clapey,Donnas,Clapey,318,2025,umidit_relativa,68.51787933094384,9

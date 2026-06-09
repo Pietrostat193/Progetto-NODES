@@ -1,0 +1,16 @@
+"section","model","term","estimate","std.error","statistic","p.value","value","metric"
+"model_compare","M2_base",NA,NA,NA,NA,NA,585.817856712459,"AIC"
+"model_compare","M2_arrivi_no_lag",NA,NA,NA,NA,NA,272.380246935743,"AIC"
+"model_compare","M2_resid_arrivi_no_lag",NA,NA,NA,NA,NA,272.380246935709,"AIC"
+"model_compare","M3_base",NA,NA,NA,NA,NA,-3629.78660401258,"AIC"
+"model_compare","M4_observed_tourism",NA,NA,NA,NA,NA,-3703.16703174591,"AIC"
+"model_compare","M4_resid_arrivi",NA,NA,NA,NA,NA,-3703.16703174588,"AIC"
+"coefficient","M2_arrivi_no_lag","log_totale_arrivi_z",0.114172813375846,0.00634115506229147,18.0050499087761,1.39608462046727e-70,NA,NA
+"coefficient","M2_resid_arrivi_no_lag","resid_arrivi_season_z",0.0866884010733016,0.00481467152222519,18.0050499131947,1.39608451458265e-70,NA,NA
+"coefficient","M4_observed_tourism","log_totale_arrivi_z",0.0341931760708905,0.00370810734331655,9.22119369940027,1.12415870449868e-17,NA,NA
+"coefficient","M4_resid_arrivi","resid_arrivi_season_z",0.0259619752435424,0.00281546794411406,9.22119369102313,1.12415876136318e-17,NA,NA
+"correlation",NA,"arrivi_vs_log_kwh_lag1_z",NA,NA,NA,NA,0.537926978984065,"correlation"
+"correlation",NA,"arrivi_vs_log_kwh_lag12_z",NA,NA,NA,NA,0.534025281159859,"correlation"
+"correlation",NA,"arrivi_vs_cos_m1_z",NA,NA,NA,NA,-0.100752862897081,"correlation"
+"correlation",NA,"arrivi_resid_vs_log_kwh_lag1_z",NA,NA,NA,NA,0.274899274283232,"correlation"
+"correlation",NA,"arrivi_resid_vs_log_kwh_lag12_z",NA,NA,NA,NA,0.270554444354472,"correlation"

@@ -1,0 +1,90 @@
+---
+title: "Piano Operativo: Impatto del Turismo sui Consumi Elettrici"
+author: "Analisi Avanzata, Copule e Forecasting"
+date: "2026-05-18"
+output: github_document
+---
+
+## 🗺️ Roadmap della Pipeline di Ricerca
+
+Questo documento delinea il piano operativo, la pipeline di analisi e la strategia di conservazione dei risultati statistici per il paper scientifico. L'obiettivo è isolare l'effetto netto del turismo sul consumo elettrico (kWh) controllando per meteo, calendario e dinamiche temporali, analizzando i rischi estremi (Copule) e fornendo scenari previsivi (Forecasting).
+
+[1. Modelli Annidati M1-M4] ──> [2. Analisi delle Copule] ──> [3. Forecasting & Scenari]
+(Effetto Medio Netto)          (Rischio e Code Estreme)       (Applicazione Pratica)
+
+
+---
+
+## 🛠️ Fase 1: Modelli Condizionali Annidati (Effetto Medio)
+
+### Analisi da Eseguire
+1. Stima progressiva dei modelli tramite OLS o Modelli Misti:
+   * M1_meteo: kWh ~ f(Gradi Giorno: HDD, CDD)
+   * M2_calendario: M1 + Giorno della settimana + Mese/Festività
+   * M3_dinamica: M2 + Lag dei consumi / Lag delle temperature
+   * M4_turismo: M3 + Afflussi Turistici (Arrivi o Presenze)
+2. Confronto Globale: Eseguire l'ANOVA nested per verificare il guadagno informativo di ogni blocco.
+3. Analisi delle varianti: Stimare M4_arrivi, M4_presenze e M4_both per identificare la metrica turistica dominante.
+
+### Risultati Statistici da Conservare
+* nested_anova.csv: Tabella ANOVA con F-statistic e relativi p-value per giustificare il passaggio da M3 a M4.
+* fixed_effects_table.csv: Coefficienti, Standard Error, t-stat e p-value di tutti i modelli.
+* model_comparison_metrics.png: Grafico a 4 quadranti contenente AIC, BIC, R2 Marginale, R2 Condizionale e flag di singolarità.
+* coef_m4_turismo.png: Forest plot dei coefficienti del modello finale per mostrare l'impatto pulito del turismo.
+
+---
+
+## 🔀 Fase 2: Analisi delle Co-dipendenze Non-Lineari (Copule)
+
+### Analisi da Eseguire
+1. Estrazione e Pulizia dei Residui:
+   * Estrai i residui dal modello M4 (rappresentano gli shock energetici non previsti da meteo e calendario).
+   * Filtra la serie del turismo con un modello ARIMA/GARCH per estrarne i residui (shock turistici isolati dalla loro stagionalità intrinseca).
+2. Standardizzazione: Trasforma i residui in distribuzioni uniformi [0,1] tramite la funzione di distribuzione empirica (EDF).
+3. Fitting delle Copule: Stimare diverse famiglie di copule (Gaussiana, t-Student, Clayton, Gumbel, Frank) sulle serie dei residui.
+4. Selezione della Copula: Scegliere la copula ottimale tramite criteri AIC/BIC.
+
+### Risultati Statistici da Conservare
+* Tabella Selezione Copula (copula_selection.csv): Log-likelihood, AIC e BIC per ogni famiglia di copula testata.
+* Parametri di Dipendenza (copula_parameters.csv): Il parametro stimato della copula vincitrice e i relativi coefficienti di dipendenza caudale (Tail Dependence Coefficient).
+* copula_contour_plot.png: Grafico dei contorni della copula teorica sovrapposto ai dati reali standardizzati.
+
+---
+
+## 🔮 Fase 3: Forecasting e Analisi di Scenario
+
+### Analisi da Eseguire
+1. Impostazione del Backtesting: Dividere il dataset in Train Set (es. 80% storico) e Test Set (ultimo 20% delle osservazioni).
+2. Addestramento del Modello Predittivo: Ottimizzare M4 in configurazione ARIMAX (Regressione con errori ARIMA) sul Train Set.
+3. Generazione degli Scenari Futuri (Oltre la fine del campione):
+   * Scenario Baseline (Medio): Il turismo futuro segue il trend stagionale storico; il meteo assume le temperature medie degli ultimi 10 anni.
+   * Scenario High-Tourism (Shock +): Incremento simulato del +20% sulle presenze turistiche nei mesi di picco.
+   * Scenario Low-Tourism (Shock -): Decremento simulato del -20% sulle presenze turistiche.
+4. Valutazione Metrica: Calcolare RMSE e MAPE sul Test Set per validare la robustezza predittiva.
+
+### Risultati Statistici da Conservare
+* forecast_accuracy.csv: Tabella con RMSE, MAE e MAPE calcolati sul test set per dimostrare l'accuratezza del modello.
+* tourism_scenarios_forecast.png: Grafico delle serie storiche future proiettate nei tre scenari con le relative bande di confidenza al 95%.
+
+---
+
+## 🔍 Fase 4: Validazione e Diagnostica (Lo Scudo dei Reviewer)
+
+### Analisi da Eseguire
+1. Test di Ljung-Box sui residui di M4 per verificare l'assenza di autocorrelazione residua.
+2. Test di Jarque-Bera o Shapiro-Wilk per valutare la normalità dei residui.
+
+### Risultati Statistici da Conservare
+* final_model_residuals.png: Grafico combinato a 4 riquadri (Residuals vs Fitted, Normal Q-Q, Istogramma e grafico ACF).
+
+---
+
+## 🗒️ Check-list dei File Pronti per la Scrittura del Paper
+
+Prima di iniziare la stesura del testo, assicurarsi che la cartella report_assets/ contenga i seguenti file chiave:
+
+- [ ] nested_anova.csv (Dimostra che il turismo conta nella media)
+- [ ] coef_m4_turismo.png (Quantifica l'effetto netto del turismo)
+- [ ] copula_selection.csv (Identifica la struttura del rischio)
+- [ ] tourism_scenarios_forecast.png (Mostra l'impatto sul futuro del sistema energetico)
+- [ ] final_model_residuals.png (Garantisce la validità statistica del paper)

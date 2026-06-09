@@ -1,0 +1,6 @@
+"comune_key","comune_nome","n_obs","actual_total","pred_total","rel_total_pct","mape","mae","bias","reason"
+"challand saint victor","Challand-Saint-Victor",9,341,713.2,109.2,2.042,41.4,41.4,"rel_total>50% AND MAPE>75%"
+"allein","Allein",9,221,356.4,61.2,1.082,19.3,15,"rel_total>50% AND MAPE>75%"
+"ollomont","Ollomont",9,861,1380.3,60.3,1.134,70.4,57.7,"rel_total>50% AND MAPE>75%"
+"saint denis","Saint-Denis",9,401,496.9,23.9,1.621,36.1,10.7,"MAPE>75%"
+"emarese","Emarèse",9,403,324.4,-19.5,1.054,13.5,-8.7,"MAPE>75%"

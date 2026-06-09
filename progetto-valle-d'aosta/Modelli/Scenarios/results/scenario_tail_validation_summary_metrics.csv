@@ -1,0 +1,6 @@
+metric,value
+spearman_weighted_vs_realized_pos,0.31464857484352204
+spearman_unweighted_vs_realized_pos,0.3114822998765432
+pearson_weighted_vs_realized_pos,0.2851833655301053
+avg_monthly_hit_rate_top10,0.4666666666666667
+median_monthly_hit_rate_top10,0.4

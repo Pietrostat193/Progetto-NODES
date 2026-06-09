@@ -1,0 +1,83 @@
+\begin{thebibliography}{13}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Badal et~al.(2023)Badal, Climent, and Rossello-Nadal]{badal2023}
+Marina Badal, Miguel~Angel Climent, and Juan~Antonio Rossello-Nadal.
+\newblock The impact of tourism on energy consumption: A sectoral analysis for the most visited countries in the world.
+\newblock \emph{Economies}, 11\penalty0 (10):\penalty0 263, 2023.
+
+\bibitem[Bakhat and Rossello(2011)]{bakhat2011}
+Mohcine Bakhat and Jaume Rossello.
+\newblock Estimation of tourism-induced electricity consumption: The case study of balearics islands, spain.
+\newblock \emph{Energy Economics}, 33\penalty0 (3):\penalty0 437--444, 2011.
+\newblock \doi{10.1016/j.eneco.2010.12.009}.
+
+\bibitem[Bergmeir et~al.(2016)Bergmeir, Hyndman, and Ben{\'i}tez]{bergmeir2016}
+Christoph Bergmeir, Rob~J. Hyndman, and Jos{\'e}~M. Ben{\'i}tez.
+\newblock Bagging exponential smoothing methods using {STL} decomposition and {Box-Cox} transformation.
+\newblock \emph{International Journal of Forecasting}, 32\penalty0 (2):\penalty0 303--312, 2016.
+\newblock \doi{10.1016/j.ijforecast.2015.07.002}.
+
+\bibitem[Bianco(2020)]{bianco2020}
+Vincenzo Bianco.
+\newblock Analysis of electricity consumption in the tourism sector: A decomposition approach.
+\newblock \emph{Journal of Cleaner Production}, 248:\penalty0 119286, 2020.
+\newblock \doi{10.1016/j.jclepro.2019.119286}.
+
+\bibitem[Furman et~al.(2015)Furman, Su, and Zitikis]{furman2015}
+Edward Furman, Jianxi Su, and Ri\v{c}ardas Zitikis.
+\newblock Paths and indices of maximal tail dependence.
+\newblock \emph{ASTIN Bulletin: The Journal of the IAA}, 45\penalty0 (3):\penalty0 661--689, 2015.
+\newblock \doi{10.1017/asb.2015.18}.
+
+\bibitem[Gelman and Hill(2007)]{gelman2007data}
+Andrew Gelman and Jennifer Hill.
+\newblock \emph{Data Analysis Using Regression and Multilevel/Hierarchical Models}.
+\newblock Cambridge University Press, Cambridge, 2007.
+
+\bibitem[Greco et~al.(2018)Greco, Ishizaka, Tasiou, and Torrisi]{greco2018}
+Salvatore Greco, Alessio Ishizaka, Menelaos Tasiou, and Gianpiero Torrisi.
+\newblock On the methodological framework of composite indices: A review of the issues of weighting, aggregation, and robustness.
+\newblock \emph{Social Indicators Research}, 2018.
+\newblock \doi{10.1007/s11205-017-1832-9}.
+
+\bibitem[Hyndman and Athanasopoulos(2021)]{hyndman2021}
+Rob~J. Hyndman and George Athanasopoulos.
+\newblock \emph{Forecasting: Principles and Practice}.
+\newblock OTexts, Melbourne, Australia, 3rd edition, 2021.
+\newblock Available at: \url{https://otexts.com/fpp3/}.
+
+\bibitem[{International Energy Agency}(2025)]{iea2025italy}
+{International Energy Agency}.
+\newblock Italy: Countries \& regions.
+\newblock IEA country profile webpage, 2025.
+\newblock Available at: \url{https://www.iea.org/countries/italy}. Accessed 19 May 2026.
+
+\bibitem[Joe(2014)]{joe2014}
+Harry Joe.
+\newblock \emph{Dependence Modeling with Copulas}.
+\newblock Chapman and Hall/CRC, Boca Raton, 2014.
+\newblock \doi{10.1201/b17116}.
+
+\bibitem[Nardo et~al.(2008)Nardo, Saisana, Saltelli, Tarantola, Hoffman, and Giovannini]{nardo2008}
+Michela Nardo, Michaela Saisana, Andrea Saltelli, Stefano Tarantola, Anders Hoffman, and Enrico Giovannini.
+\newblock \emph{Handbook on Constructing Composite Indicators: Methodology and User Guide}.
+\newblock OECD Publishing, Paris, 2008.
+\newblock \doi{10.1787/9789264043466-en}.
+
+\bibitem[Soylu et~al.(2024)Soylu, Menegaki, and Bayraktar]{soylu2024}
+O.~B. Soylu, A.~N. Menegaki, and Y.~Bayraktar.
+\newblock Energy usage trends in top tourist destinations: The role of tourism and trade.
+\newblock \emph{Energy Sources, Part B: Economics, Planning, and Policy}, 19\penalty0 (1):\penalty0 1--15, 2024.
+
+\bibitem[{Terna}(2025)]{terna2024stats}
+{Terna}.
+\newblock Dati statistici 2024 sull'energia elettrica in italia.
+\newblock Terna statistical publication webpage, 2025.
+\newblock Available at: \url{https://www.terna.it/it/sistema-elettrico/statistiche/pubblicazioni-statistiche}. Accessed 19 May 2026.
+
+\end{thebibliography}

@@ -1,0 +1,5 @@
+shock_scenario,tourism_multiplier
+down_15,0.85
+baseline,1
+up_15,1.15
+stress_up_30,1.3
