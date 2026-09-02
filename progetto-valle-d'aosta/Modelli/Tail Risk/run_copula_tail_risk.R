@@ -152,7 +152,12 @@ fit_copula_suite <- function(input_df, sample_label) {
     return(NULL)
   }
 
-  u_matrix <- as.matrix(input_df[, c("u_energy", "u_tourism")])
+  # Recompute empirical margins within every segment; pooled ranks are not
+  # uniform after restricting the sample to a municipality subset.
+  u_matrix <- cbind(
+    rank(input_df$energy_residual, ties.method = "average"),
+    rank(input_df$tourism_shock, ties.method = "average")
+  ) / (nrow(input_df) + 1)
 
   fit_results <- lapply(names(fit_specifications), function(family_name) {
     fit_one_copula(family_name, fit_specifications[[family_name]], u_matrix)

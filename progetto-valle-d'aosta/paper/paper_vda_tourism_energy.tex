@@ -210,34 +210,7 @@ In the empirical implementation, all numeric regressors are standardized before 
 
 The sequential models $M0, M0\text{-pop}, M1, M2, M3,$ and $M4$ are nested restrictions of the same equation, obtained by progressively setting subsets of coefficients equal to zero. This nesting structure makes the tourism contribution identifiable as the incremental improvement that arises when $\theta A_{it}$ is added on top of the structural, weather, calendar and dynamic blocks.
 
-\paragraph{Model validation.}
-
-Validation is formulated within the same likelihood-based framework. For each adjacent pair of nested models $M_k \subset M_{k+1}$ we compute the likelihood-ratio statistic
-
-$$
-\Lambda_{k,k+1} = 2\left\{\ell(\widehat{\vartheta}_{k+1}) - \ell(\widehat{\vartheta}_{k})\right\},
-$$
-
-where $\ell(\widehat{\vartheta}_{k})$ is the maximized log-likelihood under model $M_k$. We complement this with information criteria
-
-$$
-\mathrm{AIC}_k = -2\ell(\widehat{\vartheta}_k) + 2p_k, \qquad \mathrm{BIC}_k = -2\ell(\widehat{\vartheta}_k) + p_k \log n,
-$$
-
-and with marginal and conditional goodness-of-fit measures $R^2_{M,k}$ and $R^2_{C,k}$ for the fixed and full mixed-effects components. To monitor identification and numerical stability, for each regressor $x_j$ we compute the variance inflation factor
-
-$$
-\mathrm{VIF}_j = \frac{1}{1-R_j^2},
-$$
-
-where $R_j^2$ is obtained by projecting $x_j$ on the remaining predictors, and we also verify that the fitted mixed model is not singular. Finally, we assess robustness to the tourism specification by replacing observed arrivals with residualized arrivals,
-
-\begin{equation}
-\label{eq:atres}
-A^{\perp}_{it} = A_{it} - \widehat{\mathbb{E}}\left[A_{it} \mid \text{structure}_{it}, \text{weather}_{it}, \text{calendar}_{t}\right],
-\end{equation}
-
-and re-estimating the final model with $A^{\perp}_{it}$ in place of $A_{it}$. This validation step isolates the tourism signal that is orthogonal to the structural, meteorological and seasonal blocks and checks whether the main tourism effect survives once those shared components are removed.
+Model comparisons use likelihood-based fit criteria, mixed-model $R^2$ measures and numerical diagnostics; robustness is also checked using residualized arrivals. Full validation definitions and results are reported in Appendix~\ref{app:method-validation}.
 
 \subsection{Historical tail risk}
 
@@ -257,7 +230,7 @@ Since the copula is estimated on marginally standardized shocks, we transform bo
 U^E_{it} = \frac{\operatorname{rank}(e_{it})}{n+1}, \qquad U^T_{it} = \frac{\operatorname{rank}(A^{\perp}_{it})}{n+1},
 \end{equation}
 
-where $n$ is the number of observations in the sample used for copula estimation, $U^E_{it}$ is the pseudo-observation associated with the electricity residual, and $U^T_{it}$ is the pseudo-observation associated with the residualized tourism shock. By construction, $(U^E_{it}, U^T_{it}) \in (0,1)^2$.
+where $n$ is the number of observations in the sample used for copula estimation. Thus, each margin is empirical-uniform by construction; diagnostics confirming this property are reported in Appendix~\ref{app:copula-diagnostics}.
 
 For each candidate family $f \in \mathcal{F}$, with
 
@@ -323,29 +296,7 @@ R_i = 0.65\, p_i(0.95) + 0.25\, p_i(0.90) + 0.10\, S_i(0.95).
 
 In equation~(\ref{eq:riskscore}), $R_i$ is the municipality-level composite risk score, $p_i(0.95)$ is the conditional probability of an electricity upper-tail event given a tourism upper-tail event at the 95th percentile, $p_i(0.90)$ is the analogous quantity at the 90th percentile, and $S_i(0.95)$ is the average severity of joint exceedances at the 95th percentile. This design separates two objects: the copula captures region-wide tail dependence in the joint residual distribution, while the municipal score identifies where extreme tourism shocks are most likely to coincide with extreme electricity shocks.
 
-\paragraph{Tail-risk validation.}
-
-Validation of the tail-risk block operates along three dimensions. First, family selection is performed over the full candidate set $\mathcal{F}$ and evaluated through log-likelihood, AIC and BIC, so the preferred copula is data-driven rather than imposed ex ante. Second, dependence is checked both parametrically, through $(\lambda_L, \lambda_U)$, and non-parametrically, through municipality-level Kendall's $\tau$ and empirical co-exceedance frequencies. Third, the analysis is repeated on three samples: the pooled regional panel, the top 10 municipalities by empirical tail-risk score, and the top 10 municipalities by tourism intensity. This segmented validation is important because weak pooled dependence can mask stronger upper-tail co-movement in tourism-exposed local areas.
-
-The threshold choice is also validated internally by computing all empirical co-exceedance measures at both the 90th and 95th percentiles. The 90th percentile is informative about broader stress episodes, while the 95th percentile focuses on rarer and more operationally relevant extremes. Finally, copula estimation is only performed on samples with at least 50 observations, which imposes a minimum stability condition on the tail-risk exercise.
-
-\paragraph{Uncertainty quantification and shrinkage.}
-
-Because several municipalities record only a handful of upper-tail tourism events, the raw conditional probability $p_i(0.95)$ in equation~(\ref{eq:piq}) can be unstable: a single joint exceedance out of three tourism-tail events yields $p_i(0.95)=1/3$ on very thin evidence. We therefore add three layers of uncertainty quantification. First, we regularize the conditional co-exceedance probabilities through an empirical-Bayes (partial-pooling) random-intercept logit model. Writing $J_i$ and $T_i$ for the municipality counts of joint and tourism-tail exceedances at the 95th percentile, we fit
-\begin{equation}
-\label{eq:eb-shrinkage}
-J_i \mid T_i \sim \mathrm{Binomial}\!\left(T_i, \pi_i\right), \qquad
-\mathrm{logit}(\pi_i) = \mu + b_i, \qquad b_i \sim \mathcal{N}(0,\sigma_b^2),
-\end{equation}
-by maximum likelihood, and replace $p_i(0.95)$ by the shrunk posterior estimate $\widehat{\pi}_i^{\mathrm{EB}} = \mathrm{logit}^{-1}(\widehat{\mu}+\widehat{b}_i)$, which pulls data-poor municipalities toward the regional mean $\mathrm{logit}^{-1}(\widehat{\mu})$. The composite score is then recomputed as $R_i^{\mathrm{EB}}$ using $\widehat{\pi}_i^{\mathrm{EB}}$ in place of $p_i(0.95)$.
-
-Second, we attach interval estimates to the tail-dependence coefficient. For the pooled sample and for each municipality segment, we draw $B=1000$ nonparametric pair bootstrap resamples of the residual pairs, recompute the pseudo-observations, refit the selected copula family, and report the 2.5\% and 97.5\% percentiles of the bootstrap distribution of $\lambda_U$ (and of the copula parameter $\theta$). We explicitly flag any interval whose lower limit reaches zero, since this indicates that upper-tail dependence is not statistically distinguishable from independence. We complement these intervals with formal dependence diagnostics: an asymptotic Kendall's $\tau$ test, a permutation independence test (using Spearman's $\rho$ as a rank statistic under the permutation null), and a copula exchangeability test.
-
-Third, we quantify ranking uncertainty by a clustered (block) bootstrap over municipality-month observations: within each municipality we resample its rows with replacement, recompute $R_i$ from the resampled exceedance indicators, and re-rank all municipalities. Repeating this $B=1000$ times yields a 95\% percentile interval for each $R_i$ and the bootstrap probability that municipality $i$ falls in the regional top-10 and top-20, $\widehat{\Pr}(\text{rank}_i \le 10)$ and $\widehat{\Pr}(\text{rank}_i \le 20)$. These rank-inclusion probabilities make explicit that the ranking is a screening device subject to sampling variability rather than a deterministic ordering.
-
-\paragraph{External validation of the ranking.}
-
-Two further checks probe whether the composite score is informative beyond its construction. The first is a weight-sensitivity analysis: we recompute the ranking under the production weights $(0.65, 0.25, 0.10)$, under equal weights, under tail-only and severity-only weights, and under $500$ random weight vectors drawn from a symmetric Dirichlet on the simplex, reporting the rank correlation and top-10 overlap with the production ranking. The second is a benchmark comparison against realized 2025 positive electricity stress: we rank municipalities by five competing indicators—absolute tourism arrivals, arrivals per resident, an electricity-only extreme-frequency measure, historical average demand, and the proposed score $R_i$—and score each ranking by its Spearman correlation and top-10 overlap with the realized stress outcome.
+The copula family, thresholds, shrinkage estimator, bootstrap intervals and external ranking checks are specified in Appendix~\ref{app:tail-validation}. These checks are used to quantify uncertainty and to distinguish a screening index from a calibrated forecast.
 
 
 \subsection{Forecasting}
@@ -798,6 +749,36 @@ All figures and empirical assets used in this manuscript are generated from the 
 \bibliography{references}
 
 \appendix
+
+\section{Appendix: Method validation and copula diagnostics}
+\label{app:method-validation}
+
+\subsection{Mean-effect validation}
+For each adjacent pair of nested models $M_k \subset M_{k+1}$ we compute the likelihood-ratio statistic
+\[
+\Lambda_{k,k+1}=2\{\ell(\widehat{\vartheta}_{k+1})-\ell(\widehat{\vartheta}_{k})\},
+\]
+and compare AIC, BIC, marginal and conditional mixed-model $R^2$. Numerical stability is assessed using variance inflation factors and checks for singular fitted models. As a specification-robustness check, observed arrivals are replaced by
+\begin{equation}
+\label{eq:atres}
+A^{\perp}_{it}=A_{it}-\widehat{\mathbb{E}}\left[A_{it}\mid\text{structure}_{it},\text{weather}_{it},\text{calendar}_{t}\right].
+\end{equation}
+
+\subsection{Uniformity of copula inputs}
+\label{app:copula-diagnostics}
+The copula margins are formed using scaled empirical ranks, $\operatorname{rank}(x)/(n+1)$, with average ranks for ties. This transformation places observations strictly inside $(0,1)$ and produces empirical-uniform margins by construction. In the pooled sample ($n=5{,}892$), both margins have minimum $0.00017$, maximum $0.99983$, mean $0.50000$, variance $0.08332$, and no tied values. We also inspect marginal histograms and rank plots. For municipality subsets, ranks are recomputed within the subset before copula estimation; the pooled ranks are not reused.
+
+\subsection{Tail-risk validation and uncertainty}
+\label{app:tail-validation}
+Candidate Gaussian, Student-$t$, Clayton, Gumbel and Frank copulas are compared using log-likelihood, AIC and BIC. Tail dependence is assessed parametrically through $(\lambda_L,\lambda_U)$ and non-parametrically through Kendall's $\tau$ and empirical co-exceedance frequencies. Results are repeated for the pooled panel, the top 10 municipalities by empirical tail risk and the top 10 by tourism intensity, using both 90th- and 95th-percentile thresholds and a minimum sample size of 50.
+
+Because upper-tail events are sparse for some municipalities, the 95th-percentile conditional probabilities are also estimated with the empirical-Bayes model
+\begin{equation}
+\label{eq:eb-shrinkage}
+J_i\mid T_i\sim\mathrm{Binomial}(T_i,\pi_i),\qquad
+\mathrm{logit}(\pi_i)=\mu+b_i,\qquad b_i\sim\mathcal{N}(0,\sigma_b^2).
+\end{equation}
+Bootstrap resampling provides percentile intervals for copula tail dependence and municipality scores, together with top-10 and top-20 inclusion probabilities. Finally, weight sensitivity and benchmark comparisons against simpler municipality rankings are reported to assess whether the composite score adds information beyond exposure or demand size.
 
 \section{Appendix: Mean-effect figures}
 
